@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Documents</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .upload-section {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    input[type="file"] {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      background: white;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Uploaded Documents</h1>
+  </header>
+
+  <div class="container">
+    <div class="upload-section">
+      <h2>Upload New Documents</h2>
+      <input type="file" id="fileInput" multiple>
+      <br>
+      <button onclick="uploadFiles()">Upload</button>
+    </div>
+
+    <h2>Document History</h2>
+    <ul id="fileList">
+      <!-- File entries will appear here -->
+    </ul>
+  </div>
+
+  <script>
+    function uploadFiles() {
+      const input = document.getElementById('fileInput');
+      const list = document.getElementById('fileList');
+      const files = input.files;
+
+      if (files.length === 0) {
+        alert('Please select at least one file.');
+        return;
+      }
+
+      for (let i = 0; i < files.length; i++) {
+        const li = document.createElement('li');
+        li.textContent = `${files[i].name} • ${(files[i].size / 1024).toFixed(1)} KB`;
+        list.appendChild(li);
+      }
+
+      input.value = ''; // Clear the input after upload
+      alert('Files uploaded (locally).');
+    }
+  </script>
+</body>
+</html>

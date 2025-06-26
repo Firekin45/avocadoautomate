@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Dashboard Login</title>
+  <style>
+    body {
+      background: #f5f5f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 24px;
+      color: #333;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 14px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Client Dashboard Login</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Sign In</button>
+
+    <nav style="margin-top: 16px;">
+      <a href="index.html">⬅️ Back to Avocado Automate Homepage</a>
+    </nav>
+
+    <div style="margin-top: 12px; font-size: 14px;">
+      <a href="password.html" style="margin-right: 10px;">Forgot Password?</a>
+      <a href="signinpage.html">Create Account</a>
+    </div>
+
+    <div id="message" class="message"></div>
+  </div>
+
+  <script>
+    function login() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const message = document.getElementById('message');
+
+      if (email && password) {
+        // Basic demo logic; replace with actual auth
+        if (email === 'test@example.com' && password === 'password123') {
+          window.location.href = 'dashboard.html';
+        } else {
+          message.textContent = 'Invalid credentials. Please try again.';
+        }
+      } else {
+        message.textContent = 'Please fill in both fields.';
+      }
+    }
+  </script>
+</body>
+</html>
