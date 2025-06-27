@@ -193,6 +193,80 @@
     </div>
   </div>
 
+
+/* seperation
+
+  
+
+<!-- This is a copy and paste code it it needs to include Connor and Timi websites -->
+<div class="section" id="endorsements">
+  <h2>💬 Professional Praise</h2>
+  <p style="margin-bottom: 20px;">A few kind words from those who've supported my journey and seen my work ethic firsthand.</p>
+<!-- Connor -->
+  <div style="display: flex; justify-content: center; margin-top: 20px;">
+    <div style="background-color: rgba(255,255,255,0.08); padding: 20px; border-radius: 12px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-align: center;">
+      <img src="https://i.pravatar.cc/100?img=68" alt="Connor's profile photo" style="border-radius: 50%; width: 70px; height: 70px; margin-bottom: 10px; border: 2px solid #4CAF50;">
+      <p style="font-style: italic;">“Rajiv has always shown strong initiative and passion for what he does. His drive and focus set him apart.”</p>
+      <p style="font-weight: bold; margin-top: 10px;">— Connor H.</p>
+    </div>
+  </div>
+
+  <!-- Timi -->
+ <div style="display: flex; justify-content: center; margin-top: 20px;">
+    <div style="background-color: rgba(255,255,255,0.08); padding: 20px; border-radius: 12px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-align: center;">
+      <img src="https://i.pravatar.cc/100?img=68" alt="Connor's profile photo" style="border-radius: 50%; width: 70px; height: 70px; margin-bottom: 10px; border: 2px solid #4CAF50;">
+      <p style="font-style: italic;">“Rajiv has always shown strong initiative and passion for what he does. His drive and focus set him apart.”</p>
+      <p style="font-weight: bold; margin-top: 10px;">— Timi </p>
+    </div>
+  </div>
+
+
+  
+</div>
+<!-- This is a copy and paste code it it needs to include Connor and Timi websites -->
+
+
+<!-- This is a copy and paste code it it needs to link back to websites -->
+<div class="section" id="free-tools" style="background-color: rgba(0,0,0,0.7); padding: 20px; border-radius: 12px; max-width: 450px;">
+  <h2>🎁 Free Tools & Resources</h2>
+  <p>Drop your email and you will unlock free resources right to you: <br> - W8/W9 Prep Quick Guide <br> - Excel Formula: Reconcile Entity Names Across Companies <br> - Freelancer/Side Hustler Tax Checklist <br> </p>
+
+  <form id="freeToolsForm" onsubmit="handleFreeToolsForm(event)">
+    <input type="email" id="userEmail" placeholder="Enter your email" required style="padding:10px; width:100%; border-radius:6px; border:none; margin-bottom:10px;">
+    <button type="submit" style="background:#4CAF50; color:white; padding:10px 15px; border:none; border-radius:6px; cursor:pointer;">
+      🔓 Unlock Free Downloads
+    </button>
+  </form>
+
+  <div id="toolsLinks" style="display:none; margin-top:15px;">
+    <ul>
+      <li>📥 <a href="yourfile.pdf" style="color: #90ee90;">Tax Checklist for Freelancers (PDF)</a></li>
+      <li>📊 <a href="yourfile.xlsx" style="color: #90ee90;">Excel Formula: Reconcile Entity Names Across Companies (XLSX)</a></li>
+      <li>🧮 <a href="yourfile.docx" style="color: #90ee90;">W‑8/W‑9 Prep Quick Guide (DOCX)</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function handleFreeToolsForm(e) {
+    e.preventDefault();
+    const email = document.getElementById("userEmail").value;
+    if (!email) return;
+
+    // Optional: send email to your database (e.g. Google Apps Script, Formspree, Zapier, etc.)
+
+    localStorage.setItem("freeToolsEmail", email); // Save locally
+    document.getElementById("freeToolsForm").style.display = "none";
+    document.getElementById("toolsLinks").style.display = "block";
+  }
+</script>
+<!-- This is a copy and paste code it it needs to link back to websites -->
+
+
+
+
+
+  
  
 
   <div class="section" id="tax">
