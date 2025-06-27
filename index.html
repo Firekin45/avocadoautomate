@@ -77,12 +77,11 @@
 }
 
 
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
   .client-signin {
-    position: static !important;
-    text-align: center;
-    margin-top: 10px;
-    display: block;
+    top: 10px !important;
+    right: 10px !important;
+    transform: scale(0.75); /* Shrinks the size */
   }
 }
 
@@ -95,9 +94,12 @@
     <h1 style="margin: 0; font-size: 36px; color: white; text-align: center;">Avocado Automate</h1>
     <h3 style="margin-top: 8px; font-weight: normal; color: white; text-align: center;">Smarter Data. Faster Decisions. Powered by Hard Work and Dedication.</h3>
   </div>
- <div class="client-signin" style="position: absolute; top: 20px; right: 20px;">
-  <a href="dashboard.html" style="background-color: #4CAF50; color: white; padding: 10px 18px; text-decoration: none; font-weight: bold; border-radius: 6px;">🔐 Client Sign In</a>
+<div class="client-signin" style="position: absolute; top: 20px; right: 20px;">
+  <a href="dashboard.html" style="background-color: #4CAF50; color: white; padding: 8px 14px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px;">
+    🔐 Sign In
+  </a>
 </div>
+
 
 
   </header>
