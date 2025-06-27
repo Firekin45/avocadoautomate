@@ -1,50 +1,112 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <title>Avocado Automate | Your Cart</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shopping cart for  — tax, automation, and creator services.">
-  <!-- Same visual styling as your main page -->
+  <meta name="description" content="Shopping cart for — tax, automation, and creator services.">
+
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=AYQeXaGMNxIh5yUFTP40dy6AcUk_izJzyJwQgwww6E-_PzYCugwk7kLotzyoP7yAs-ga3Lumt-HYo1kQ&currency=USD"></script>
+
   <style>
-    body{
-      background:url("finovate1.jpg") no-repeat center center fixed;
-      background-size:cover;
-      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-      color:white;margin:0;padding:0
+    body {
+      background: url("finovate1.jpg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
     }
-    header{background:rgba(0,0,0,.9);padding:20px;text-align:center}
-    header h1{margin:0;font-size:36px;color:white}
-    header h3{margin-top:8px;font-weight:normal;color:white}
-    nav{background-color:black;text-align:center;padding:10px 0;overflow-x:auto;white-space:nowrap}
-    nav a{color:white;text-decoration:none;padding:10px 20px;display:inline-block}
-    nav a:hover{background:#444}
-    .section{max-width:900px;margin:40px auto;background:rgba(0,0,0,.85);padding:30px 25px;border-radius:12px}
-    table{width:100%;border-collapse:collapse;margin-top:10px}
-    th,td{padding:12px 10px;border-bottom:1px solid #999;text-align:left}
-    th{font-size:18px}
-    .remove-btn{background:#f44336;border:none;color:white;padding:6px 12px;border-radius:5px;cursor:pointer}
-    .remove-btn:hover{background:#d32f2f}
-    .total-row td{font-weight:bold;font-size:20px}
-    .actions{margin-top:30px;text-align:center}
-    .actions a{display:inline-block;background:#4CAF50;color:white;padding:14px 24px;border-radius:8px;
-               font-size:18px;text-decoration:none}
-    .actions a:hover{background:#45a049;transform:scale(1.03);transition:.3s}
-    .contact-banner{background:rgba(255,255,255,.1);text-align:center;padding:15px;font-size:20px;font-weight:bold;color:#000}
-    @media (max-width:768px){body{font-size:18px}}
+    header {
+      background: rgba(0,0,0,0.9);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 36px; color: white; }
+    header h3 { margin-top: 8px; font-weight: normal; color: white; }
+    nav {
+      background-color: black;
+      text-align: center;
+      padding: 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+    nav a:hover { background: #444; }
+
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgba(106, 67, 60, 0.85);
+      padding: 30px 25px;
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 12px 10px;
+      border-bottom: 1px solid #999;
+      text-align: left;
+    }
+
+    th { font-size: 18px; }
+
+    .remove-btn {
+      background: #f44336;
+      border: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .remove-btn:hover { background: #d32f2f; }
+
+    .total-row td {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .actions {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .contact-banner {
+      background: rgba(255,255,255,.1);
+      text-align: center;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      body { font-size: 18px; }
+    }
   </style>
 </head>
+
 <body>
-  <!-- Header -->
   <header>
     <h1>Avocado Automate</h1>
     <h3>Your Shopping Cart</h3>
   </header>
 
-  <!-- Simple nav (just Home link so users don't get lost) -->
   <nav>
     <a href="index.html">⬅️ Back to Homepage</a>
   </nav>
 
-  <!-- Cart table -->
   <div class="section">
     <h2 style="margin-top:0">Items in Your Cart</h2>
     <table id="cartTable">
@@ -55,38 +117,31 @@
           <th style="width:25%">Remove</th>
         </tr>
       </thead>
-      <tbody id="cartBody"><tr class="total-row">
-        <td>Total</td>
-        <td colspan="2">$0.00</td>
-      </tr></tbody>
+      <tbody id="cartBody"></tbody>
     </table>
 
-    <div class="actions">
-      <a href="mailto:rajiv.rampersaud11@gmail.com?subject=Finovate%20Order%20Inquiry">📧 Email Us to Finalize</a>
-    </div>
+    <!-- PayPal Button Container -->
+    <div id="paypal-button-container" style="margin-top: 30px;"></div>
+
+   
   </div>
 
-  <!-- Re-use contact banner -->
   <footer class="contact-banner">
     📞 Call/Text: <a style="color:#000" href="tel:+19292906959">929-290-6959</a> |
     ✉️ Email: <a style="color:#000" href="mailto:rajiv.rampersaud11@gmail.com">rajiv.rampersaud11@gmail.com</a>
   </footer>
 
-  <!-- Cart logic -->
   <script>
-    // Load, display, and manage the cart
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     function renderCart() {
       const tbody = document.getElementById('cartBody');
-      tbody.innerHTML = '';               // clear old rows
+      tbody.innerHTML = '';
       let total = 0;
 
       cart.forEach((item, idx) => {
-        // Each cart entry can be either a string ("Basic Tax Package") or an object {name, price}
-        const name  = typeof item === 'string' ? item : item.name;
-        const price = typeof item === 'string' ? 0      : Number(item.price) || 0;
-
+        const name = typeof item === 'string' ? item : item.name;
+        const price = typeof item === 'string' ? 0 : Number(item.price) || 0;
         total += price;
 
         const tr = document.createElement('tr');
@@ -98,7 +153,6 @@
         tbody.appendChild(tr);
       });
 
-      // Total row
       const totalRow = document.createElement('tr');
       totalRow.className = 'total-row';
       totalRow.innerHTML = `
@@ -114,9 +168,34 @@
       renderCart();
     }
 
-    // Draw on first load
+    function getCartTotal() {
+      return cart.reduce((acc, item) => {
+        const price = typeof item === 'string' ? 0 : Number(item.price) || 0;
+        return acc + price;
+      }, 0).toFixed(2);
+    }
+
     renderCart();
+
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        const totalAmount = getCartTotal();
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: totalAmount
+            }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert('✅ Transaction completed by ' + details.payer.name.given_name);
+          localStorage.removeItem('cart');
+          location.reload();
+        });
+      }
+    }).render('#paypal-button-container');
   </script>
-
-
-</body></html>
+</body>
+</html>
