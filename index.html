@@ -66,7 +66,21 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
     .card img { height: 150px; width: auto; object-fit: cover; border-radius: 6px; }
-    .price { font-size: 22px; color: #90ee90; font-weight: bold; margin: 10px 0; }
+    .price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+}
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+}
+.new-price {
+  color: white;
+  font-weight: bold;
+}
+
 
     input, textarea, button { width: 100%; padding: 10px; margin-top: 8px; border-radius: 5px; border: none; }
     button { background-color: #4CAF50; color: white; font-size: 1em; cursor: pointer; }
@@ -283,7 +297,10 @@
       ✔️ One State Return<br>
       ✔️ Direct Deposit
     </p>
-  <div class="price">$34.99</div>
+  <div class="price">
+  <span class="old-price">$250</span>
+  <span class="new-price">$34.99</span>
+</div>
   <button onclick="addToCart('Basic Tax Package', 34.99)">Add to Cart</button>
 </div>
 
@@ -297,7 +314,10 @@
     ✔️ Student Loan Interest<br>
     ✔️ Gambling Winnings
   </p>
-  <div class="price">$35.99</div>
+  <div class="price">
+  <span class="old-price">$300</span>
+  <span class="new-price">$35.99</span>
+</div>
   <button onclick="addToCart('Family Tax Package',35.99)">Add to Cart</button>
 </div>
 
@@ -308,7 +328,10 @@
     ✔️ Sale of Stocks<br>
     ✔️ K‑1 Income (Partnership/Trust)
   </p>
-  <div class="price">$36.99</div>
+  <div class="price">
+  <span class="old-price">$350</span>
+  <span class="new-price">$36.99</span>
+</div>
   <button onclick="addToCart('Investment Tax Package',36.99)">Add to Cart</button>
 </div>
 
@@ -322,7 +345,9 @@
     ✔️ K‑1 Income<br>
     ✔️ Single‑Member LLC
   </p>
-  <div class="price">$37.99</div>
+  <div class="price">
+  <span class="old-price">$500</span>
+  <span class="new-price">$37.99</span>
   <button onclick="addToCart('Business & Rental Tax Package',37.99)">Add to Cart</button>
 </div>
 
@@ -336,7 +361,8 @@
     ✔️ K‑1 Income<br>
     ✔️ Single‑Member LLC
   </p>
-  <div class="price">$38.99</div>
+  <span class="old-price">$650</span>
+  <span class="new-price">$38.99</span>
   <button onclick="addToCart('Premium Filing Package',38.99)">Add to Cart</button>
 </div>
 
