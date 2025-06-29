@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ – Avocado Automate</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5fff5;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #4CAF50;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+    .faq-container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      padding: 30px 25px;
+    }
+    .faq-item {
+      border-bottom: 1px solid #e0e0e0;
+      padding: 15px 0;
+    }
+    .faq-question {
+      cursor: pointer;
+      font-weight: bold;
+      color: #2e7d32;
+      font-size: 1.1em;
+      position: relative;
+      padding-right: 30px;
+    }
+    .faq-answer {
+      display: none;
+      padding-top: 10px;
+      color: #444;
+      font-size: 1em;
+    }
+    .faq-question:after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      font-size: 24px;
+      color: #4CAF50;
+    }
+    .faq-question.active:after {
+      content: '-';
+    }
+    .avo-badge {
+      background-color: #A5D6A7;
+      color: #1B5E20;
+      font-weight: bold;
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.85em;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🥑 FAQ – Avocado Automate</h1>
+  <div class="faq-container">
+    <div class="faq-item">
+      <div class="faq-question">📍 Where are you located?</div>
+      <div class="faq-answer">We’re based in Queens, NY – but we work with clients virtually across the country!</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">📆 Do I need an appointment?</div>
+      <div class="faq-answer">Yes, booking ahead ensures you get the time and attention you need. You can <a href="https://calendly.com/rajiv-rampersaud11/30min" target="_blank">schedule online here</a> anytime!</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">📤 How do I send my tax or project documents?</div>
+      <div class="faq-answer">Secure upload links are available after you book. You can also email or text us to receive a custom upload link.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">🤖 What kind of automation services do you offer?</div>
+      <div class="faq-answer">We build Excel macros, automate reports with Alteryx or Python, and design dashboards — all tailored to your workflow.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">💸 How much do your services cost?</div>
+      <div class="faq-answer">It depends on the service, please see our main website for details.</div>
+    </div>
+  </div>
+  <script>
+    const questions = document.querySelectorAll(".faq-question");
+    questions.forEach(q => {
+      q.addEventListener("click", () => {
+        q.classList.toggle("active");
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>
