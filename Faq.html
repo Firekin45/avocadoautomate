@@ -6,42 +6,52 @@
   <title>FAQ – Avocado Automate</title>
   <style>
     body {
+      background: url("Finovate1.jpg") no-repeat center center fixed;
+      background-size: cover;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5fff5;
+      color: white;
       margin: 0;
-      padding: 20px;
-      color: #333;
+      padding: 0;
     }
-    h1 {
+    header {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      color: white;
+    }
+    .faq-section {
+      max-width: 860px;
+      margin: 50px auto;
+      background: rgba(0, 0, 0, 0.85);
+      border-radius: 12px;
+      padding: 30px;
+    }
+    h2 {
       text-align: center;
       color: #4CAF50;
-      font-size: 2.5em;
+      font-size: 2.2em;
       margin-bottom: 30px;
     }
-    .faq-container {
-      max-width: 860px;
-      margin: 0 auto;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-      padding: 30px 25px;
-    }
     .faq-item {
-      border-bottom: 1px solid #e0e0e0;
+      border-bottom: 1px solid #444;
       padding: 15px 0;
     }
     .faq-question {
       cursor: pointer;
       font-weight: bold;
-      color: #2e7d32;
-      font-size: 1.1em;
+      color: #90ee90;
+      font-size: 1.2em;
       position: relative;
       padding-right: 30px;
     }
     .faq-answer {
       display: none;
       padding-top: 10px;
-      color: #444;
+      color: #eee;
       font-size: 1em;
     }
     .faq-question:after {
@@ -54,46 +64,60 @@
     .faq-question.active:after {
       content: '-';
     }
-    .avo-badge {
-      background-color: #A5D6A7;
-      color: #1B5E20;
-      font-weight: bold;
-      display: inline-block;
-      padding: 4px 10px;
+    .back-home {
+      display: block;
+      width: fit-content;
+      margin: 30px auto 0;
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      text-decoration: none;
       border-radius: 8px;
-      font-size: 0.85em;
-      margin-bottom: 8px;
+      font-weight: bold;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>🥑 FAQ – Avocado Automate</h1>
-  <div class="faq-container">
-    <div class="faq-item">
-      <div class="faq-question">📍 Where are you located?</div>
-      <div class="faq-answer">We’re based in Queens, NY – but we work with clients virtually across the country!</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">📆 Do I need an appointment?</div>
-      <div class="faq-answer">Yes, booking ahead ensures you get the time and attention you need. You can <a href="https://calendly.com/rajiv-rampersaud11/30min" target="_blank">schedule online here</a> anytime!</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">📤 How do I send my tax or project documents?</div>
-      <div class="faq-answer">Secure upload links are available after you book. You can also email or text us to receive a custom upload link.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">🤖 What kind of automation services do you offer?</div>
-      <div class="faq-answer">We build Excel macros, automate reports with Alteryx or Python, and design dashboards — all tailored to your workflow.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">💸 How much do your services cost?</div>
-      <div class="faq-answer">It depends on the service, please see our main website for details.</div>
-    </div>
+  <header>
+    <h1>Avocado Automate 🥑</h1>
+  </header>
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <!-- INSERTED FULL FAQ LIST -->
+    <div class="faq-item"><div class="faq-question">📍 Where are you located?</div><div class="faq-answer">We’re based in Queens, NY and Manhattan, NY – but we work with clients virtually.</div></div>
+    <div class="faq-item"><div class="faq-question">📆 Do I need an appointment?</div><div class="faq-answer">Yes, booking ahead ensures you get the time and attention you need. You can schedule online here anytime!</div></div>
+    <div class="faq-item"><div class="faq-question">📤 How do I send my tax or project documents?</div><div class="faq-answer">Secure upload links are available after you book. You can also email or text us to receive a custom upload link.</div></div>
+    <div class="faq-item"><div class="faq-question">🤖 What kind of automation services do you offer?</div><div class="faq-answer">We build Excel macros, automate reports with Alteryx or Python, and design dashboards — all tailored to your workflow.</div></div>
+    <div class="faq-item"><div class="faq-question">💸 How much do your services cost?</div><div class="faq-answer">It depends on the service—please see our main website for details.</div></div>
+    <div class="faq-item"><div class="faq-question">📍 What’s your address?</div><div class="faq-answer">9026 178th Street Jamaica NY.</div></div>
+    <div class="faq-item"><div class="faq-question">🕒 What time are you open?</div><div class="faq-answer">We’re open 7 days a week for your convenience.</div></div>
+    <div class="faq-item"><div class="faq-question">📞 Where is my refund?</div><div class="faq-answer">Call 1‑800‑829‑1040 or use the IRS “Where’s My Refund?” tool. IRS usually issues 90%+ of refunds within 21 days. If you receive an IRS letter, email all pages to rajiv.rampersaud11@gmail.com or text 929‑290‑6959.</div></div>
+    <div class="faq-item"><div class="faq-question">⌛ How long does it take to get my refund?</div><div class="faq-answer">Most refunds arrive within 21 days, though some may take longer depending on IRS review.</div></div>
+    <div class="faq-item"><div class="faq-question">📄 What forms do I need to file my taxes?</div><div class="faq-answer">Any mail marked "IMPORTANT TAX INFORMATION ENCLOSED" — W‑2s, 1099s, and dependent info (names, SSNs, DOBs), etc.</div></div>
+    <div class="faq-item"><div class="faq-question">📅 What is the IRS refund schedule?</div><div class="faq-answer"><ul><li>E‑file + direct deposit: 1–3 weeks</li><li>E‑file + check: ~1 month</li><li>Mail + direct deposit: ~3 weeks</li><li>Mail + check: ~2 months</li></ul></div></div>
+    <div class="faq-item"><div class="faq-question">📬 What happens after I e-file?</div><div class="faq-answer">We submit your return to the IRS. They review it for 24–48 hours. Once accepted, your refund is processed according to the IRS timeline.</div></div>
+    <div class="faq-item"><div class="faq-question">✅ What does it mean when my tax return is accepted?</div><div class="faq-answer">It means the IRS verified your identity and initial checks are complete. The next step is refund approval and issuance.</div></div>
+    <div class="faq-item"><div class="faq-question">⚡ Is it faster to e-file or mail my return?</div><div class="faq-answer">E-filing with direct deposit is the fastest method.</div></div>
+    <div class="faq-item"><div class="faq-question">💳 What tax breaks delay my refund?</div><div class="faq-answer">Earned Income Tax Credit (EITC) and Additional Child Tax Credit often delay refunds until early March.</div></div>
+    <div class="faq-item"><div class="faq-question">🚀 Should I file early?</div><div class="faq-answer">Yes! It reduces stress and gets your refund faster. Plus, if you owe, you have more time to plan.</div></div>
+    <div class="faq-item"><div class="faq-question">📌 What if I miss the deadline?</div><div class="faq-answer">You can request an extension until Oct 15 to file, but payment is still due by April 15 to avoid penalties.</div></div>
+    <div class="faq-item"><div class="faq-question">🗓️ Are there key tax deadlines?</div><div class="faq-answer">Yes: April 15 (filing/payment deadline), October 15 (extension deadline).</div></div>
+    <div class="faq-item"><div class="faq-question">🚓 Can you go to jail for back taxes?</div><div class="faq-answer">Not for owing taxes. But fraudulent activity or willful evasion could result in penalties or legal issues.</div></div>
+    <div class="faq-item"><div class="faq-question">📚 How many years can I file back taxes?</div><div class="faq-answer">Up to six years from the end of the relevant assessment year.</div></div>
+    <div class="faq-item"><div class="faq-question">💰 Will I get a stimulus check if I haven’t filed in 5 years?</div><div class="faq-answer">No. You must have filed or used the IRS Non-Filer tool to qualify.</div></div>
+    <a href="index.html" class="back-home">⬅️ Back to Homepage</a>
   </div>
   <script>
     const questions = document.querySelectorAll(".faq-question");
     questions.forEach(q => {
       q.addEventListener("click", () => {
+        questions.forEach(other => {
+          if (other !== q) {
+            other.classList.remove("active");
+            other.nextElementSibling.style.display = "none";
+          }
+        });
         q.classList.toggle("active");
         const answer = q.nextElementSibling;
         answer.style.display = answer.style.display === "block" ? "none" : "block";
@@ -101,4 +125,27 @@
     });
   </script>
 </body>
+
+
+<footer style="text-align:center; padding: 20px; background: #111; color: white;">
+  <nav>
+     <a href="Faq.html"style="color: #90ee90; margin: 0 10px;">Faq</a>
+    <a href="#about" style="color: #90ee90; margin: 0 10px;">About</a>
+   <a href="#credentials" style="color: #90ee90; margin: 0 10px;">Credentials</a>
+    <a href="#tax" style="color: #90ee90; margin: 0 10px;">Tax</a>
+    <a href="#automation" style="color: #90ee90; margin: 0 10px;">Automation</a>
+    <a href="#projects" style="color: #90ee90; margin: 0 10px;">Projects</a>
+    <a href="#sessions" style="color: #90ee90; margin: 0 10px;">Sessions</a>
+    <a href="#clips" style="color: #90ee90; margin: 0 10px;">Clips</a>
+    <a href="#creator-services" style="color: #90ee90; margin: 0 10px;">Content</a>
+
+
+
+   
+
+    
+  </nav>
+  <p style="margin-top: 12px;">&copy; 2025 Avocado Automate. All rights reserved.</p>
+</footer>
+
 </html>
