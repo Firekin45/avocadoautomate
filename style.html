@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Choose your Avocado AI Bot access level: Free, Pro, or Enterprise tiers with advanced features for tax, automation, and data support.">
+  <title>Avocado Bot Access Tiers</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #222;
+    }
+    header {
+      background: #1b1b1b;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      position: relative;
+    }
+    header h1 { margin-bottom: 10px; font-size: 32px; }
+    header p { color: #ccc; font-size: 16px; }
+    .cart-link {
+      background: #4CAF50;
+      color: white;
+      padding: 8px 14px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 14px;
+      margin-left: 8px;
+    }
+    .nav-links {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .tiers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+    .tier {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+      border-top: 6px solid #4CAF50;
+    }
+    .tier h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #4CAF50;
+      font-weight: bold;
+    }
+    .tier ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: left;
+    }
+    .tier ul li::before {
+      content: "✔️ ";
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #45a049;
+    }
+    footer {
+      background: #1b1b1b;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🥑 Avocado AI Bot Tiers</h1>
+    <p>Choose a plan to access smarter support for tax, automation, and data cleanup.</p>
+    <div class="nav-links">
+      <a href="index.html" class="cart-link">🏠 Free General AI Chat Bot</a>
+      <a href="/shopping_cart2.html" class="cart-link">🛒 View Cart</a>
+    </div>
+  </header>
+
+  <section class="tiers">
+    <div class="tier">
+      <h2>Starter Access</h2>
+      <p class="price">$4.99 / month</p>
+      <ul>
+        <li>Basic answers to tax & automation FAQs</li>
+        <li>Access to preset form explanations</li>
+        <li>Limited chat length & history</li>
+        <li>Response delay: 3–5 sec</li>
+      </ul>
+      <button class="btn" onclick="addToCart('Starter Access Plan', 4.99)">Add to Cart</button>
+    </div>
+
+    <div class="tier">
+      <h2>Pro Access</h2>
+      <p class="price">$9.99 / month</p>
+      <ul>
+        <li>Fast access to AI chatbot (real-time)</li>
+        <li>Help with tax forms, workflows, Excel formulas</li>
+        <li>Form logic checks (1042-S, W-8, 1099)</li>
+        <li>Up to 20 chat sessions/month</li>
+        <li>Save responses to PDF</li>
+      </ul>
+      <button class="btn" onclick="addToCart('Pro Access Plan', 9.99)">Add to Cart</button>
+    </div>
+
+    <div class="tier">
+      <h2>Enterprise Access</h2>
+      <p class="price">$49.99 / month</p>
+      <ul>
+        <li>Unlimited usage for teams</li>
+        <li>Custom model tuning</li>
+        <li>Private Slack/Teams integration</li>
+        <li>Data validation tools</li>
+        <li>Priority support</li>
+      </ul>
+      <button class="btn" onclick="addToCart('Enterprise Access Plan', 49.99)">Add to Cart</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Avocado Automate. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name, price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${name} added to cart — $${price.toFixed(2)}.\nYou can view your cart to complete checkout.`);
+      window.location.href = "/shopping_cart2.html";
+    }
+  </script>
+</body>
+</html>
