@@ -525,15 +525,21 @@
 </script>
 
 <script>
-  const slides = document.querySelectorAll(".endorsement-slide");
-  let current = 0;
+  window.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".endorsement-slide");
+    if (slides.length === 0) return;
 
-  setInterval(() => {
-    slides[current].style.opacity = 0;
-    current = (current + 1) % slides.length;
+    let current = 0;
     slides[current].style.opacity = 1;
-  }, 6000);
+
+    setInterval(() => {
+      slides[current].style.opacity = 0;
+      current = (current + 1) % slides.length;
+      slides[current].style.opacity = 1;
+    }, 6000);
+  });
 </script>
+
 
 
 
