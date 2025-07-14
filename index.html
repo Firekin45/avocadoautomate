@@ -130,16 +130,8 @@
 
 
 
+
   </header>
-
-<div class="contact-banner" style="color:#000000">
-  📞 Call/Text: <a style="color:#000000" href="tel:+19292906959">929‑290‑6959</a> |
-  ✉️ Email: <a style="color:#000000" href="mailto:rajiv.rampersaud11@gmail.com">rajiv.rampersaud11@gmail.com</a> |
-  <div style="margin-top: 10px; font-weight: bold;">Our dedicated team is here to support you 24/7, anytime, anywhere.</div>
-</div>
-
-
-
   <nav>
     <a href="Faq.html">Faq</a>
     <a href="#about">About</a>
@@ -154,35 +146,20 @@
     <a href="shopping_cart2.html">🛒 View Cart</a>
 
   </nav>
-  <div class="section" id="mascot-animation" style="text-align: center; margin: 40px auto;">
-  <h2 style="margin-bottom: 20px; color: white; font-size: 26px;">Meet Avocado Automate 🥑</h2>
-  <img id="avocadoImage" src="ChatGPT Image Jun 26, 2025, 07_35_44 AM.png" alt="Avocado Mascot" style="width: 180px; height: auto; border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px; transition: opacity 0.6s ease-in-out; opacity: 1;">
+<!-- Hero CTA Banner (AI-Focused) -->
+<div style="background-color: rgba(0,0,0,0.7); padding: 40px 20px; text-align: center; max-width: 100%;">
+  <h2 style="font-size: 32px; margin-bottom: 12px; color: white;">Smarter Workflows. Powered by Automation &amp; AI.</h2>
+  <p style="font-size: 18px; color: #ddd; margin-bottom: 25px;">
+    We build lean, intelligent systems that handle your tax, data, and content workflows — so you don’t have to.
+  </p>
+  <a href="#automation" style="background-color: #4CAF50; padding: 12px 28px; font-size: 18px; color: white; text-decoration: none; border-radius: 8px;">
+    ⚙️ See What We Automate
+  </a>
+</div>
 
 
-<script>
-  const images = [
-    "ChatGPT Image Jun 26, 2025, 07_32_00 AM.png",
-    "ChatGPT Image Jun 26, 2025, 07_35_44 AM.png",
-    "ChatGPT Image Jun 26, 2025, 12_54_21 PM.png"
-  ];
 
-  let index = 0;
-  const imgElement = document.getElementById('avocadoImage');
-
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    imgElement.style.opacity = 0;
-    setTimeout(() => {
-      imgElement.src = images[index];
-      imgElement.style.opacity = 1;
-    }, 400);
-  }, 3000);
-</script>
-    </div>
-  
-
-
-  
+ 
 <div class="section" id="about">
   <h2 style="text-align: center; font-size: 32px; margin-bottom: 20px;">🚀 Our Mission</h2>
   <p style="font-size: 18px; line-height: 1.6;">
@@ -203,80 +180,121 @@
 
 
 
-  
 
+<style>
+  #mascot-box {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+    text-align: center;
+  }
 
+  #mascot-box.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-<div class="section" id="endorsements">
-  <h2>💼 Professional Endorsements</h2>
-  <p style="margin-bottom: 20px; font-size: 16px; color: #ccc;">
-    Direct feedback from professionals who’ve worked with me at the highest level.
-  </p>
+  .chat-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-  <div id="endorsementSlider" style="position: relative; height: 300px; max-width: 500px; margin: auto;">
-    <div class="endorsement-slide" style="position: absolute; top: 0; left: 0; right: 0; opacity: 1; transition: opacity 1s;">
-      <div style="background-color: rgba(255,255,255,0.08); padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-align: center;">
-        <img src="Connor Hodgson.jpg" alt="Connor H." style="border-radius: 50%; width: 70px; height: 70px; margin-bottom: 10px; border: 2px solid #4CAF50;">
-        <p style="font-style: italic;">“Rajiv has always shown strong initiative and passion for what he does. His drive and focus set him apart.”</p>
-<p style="color: gold; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">★★★★★</p>
-        <p style="font-weight: bold;">— Connor H.<br><span style="font-size: 0.9em; color: #ccc;">Senior Tax Consultant, Deloitte</span></p>
-      </div>
-    </div>
+  .chat-button:hover {
+    background-color: #45a049;
+  }
+</style>
 
-    <div class="endorsement-slide" style="position: absolute; top: 0; left: 0; right: 0; opacity: 0; transition: opacity 1s;">
-      <div style="background-color: rgba(255,255,255,0.08); padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-align: center;">
-        <img src="Timu.jpg" alt="Timi T." style="border-radius: 50%; width: 70px; height: 70px; margin-bottom: 10px; border: 2px solid #4CAF50;">
-        <p style="font-style: italic;">“Rajiv has a strong command of automation tools and is always looking for smarter, more efficient ways to streamline workflows.”</p>
-<p style="color: gold; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">★★★★★</p>
-        <p style="font-weight: bold;">— Olufolarotimi T.<br><span style="font-size: 0.9em; color: #ccc;">Senior Tax Consultant, Deloitte</span></p>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="section show" id="mascot-box">
+  <div style="display: inline-block; background-color: rgba(255,255,255,0.08); padding: 30px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.4); max-width: 400px;">
+    <img id="avocadoMascot" src="ChatGPT Image Jun 26, 2025, 07_35_44 AM.png" alt="Avocado Mascot" style="width: 180px; height: auto; border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px; transition: opacity 0.6s ease-in-out; opacity: 1;">
 
+    <h3 style="color: white; font-size: 24px; margin: 10px 0;">Meet Avocado Automate 🥑</h3>
+    <p style="font-size: 16px; color: #ccc; line-height: 1.5;">
+      Your friendly AI-powered assistant for taxes, automation, and data cleanup.<br>
+      Built with hustle, optimized for speed.
+    </p>
+    <p id="avoQuote" style="font-style: italic; color: #90ee90; font-size: 15px; margin-top: 14px;">Automation makes my seed spin.</p>
 
-
-
-<div class="section" id="free-tools" style="background-color: rgba(0,0,0,0.7); padding: 20px; border-radius: 12px; max-width: 450px;">
-  <h2>🎁 Free Tools &amp; Resources</h2>
-  <p>Drop your email and you will unlock free resources right to you:
-    <br>✔️ W8/W9 Prep Quick Guide 
-    <br>✔️ Excel Formula: Reconcile Entity Names Across Companies 
-    <br>✔️ Freelancer/Side Hustler Tax Checklist <br> 
-  </p>
-
-  <form id="freeToolsForm" onsubmit="handleFreeToolsForm(event)">
-    <input type="email" id="userEmail" placeholder="Enter your email" required="" style="padding:10px; width:100%; border-radius:6px; border:none; margin-bottom:10px;">
-    <button type="submit" style="background:#4CAF50; color:white; padding:10px 15px; border:none; border-radius:6px; cursor:pointer;">
-      🔓 Unlock Free Downloads
-    </button>
-  </form>
-
-  <div id="toolsLinks" style="display:none; margin-top:15px;">
-    <ul>
-      <li>📥 <a href="yourfile.pdf" style="color: #90ee90;">Tax Checklist for Freelancers (PDF)</a></li>
-      <li>📊 <a href="yourfile.xlsx" style="color: #90ee90;">Excel Formula: Reconcile Entity Names Across Companies (XLSX)</a></li>
-      <li>🧮 <a href="yourfile.docx" style="color: #90ee90;">W‑8/W‑9 Prep Quick Guide (DOCX)</a></li>
-    </ul>
+    <button class="chat-button" onclick="openChatbot()">💬 Chat with Avocado</button>
   </div>
 </div>
 
 <script>
-  function handleFreeToolsForm(e) {
-    e.preventDefault();
-    const email = document.getElementById("userEmail").value;
-    if (!email) return;
+  const images = [
+    "ChatGPT Image Jun 26, 2025, 07_32_00 AM.png",
+    "ChatGPT Image Jun 26, 2025, 07_35_44 AM.png",
+    "ChatGPT Image Jun 26, 2025, 12_54_21 PM.png"
+  ];
 
-    // Optional: send email to your database (e.g. Google Apps Script, Formspree, Zapier, etc.)
+  const quotes = [
+    "Need help with a 1042-S? I got you.",
+    "Automation makes my seed spin.",
+    "No one likes messy spreadsheets — I smash them.",
+    "Smarter data, faster filings, fewer headaches."
+  ];
 
-    localStorage.setItem("freeToolsEmail", email); // Save locally
-    document.getElementById("freeToolsForm").style.display = "none";
-    document.getElementById("toolsLinks").style.display = "block";
+  let index = 0;
+  const imgEl = document.getElementById("avocadoMascot");
+  const quoteEl = document.getElementById("avoQuote");
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    imgEl.style.opacity = 0;
+    setTimeout(() => {
+      imgEl.src = images[index];
+      imgEl.style.opacity = 1;
+    }, 300);
+    quoteEl.textContent = quotes[index];
+  }, 3500);
+
+  // Scroll animation
+  const mascotBox = document.getElementById("mascot-box");
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        mascotBox.classList.add("show");
+        obs.unobserve(mascotBox);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(mascotBox);
+
+  // Chatbot open function — replace with your logic
+  function openChatbot() {
+    // Example: scroll to chatbot section
+    const chatbot = document.getElementById("chatbot");
+    if (chatbot) {
+      chatbot.scrollIntoView({ behavior: "smooth" });
+    } else {
+      alert("Chatbot coming soon!");
+    }
   }
 </script>
-<!-- This is a copy and paste code it it needs to link back to websites -->
 
 
+  
+<div class="contact-banner" style="color:#000000">
+  📞 Call/Text: <a style="color:#000000" href="tel:+19292906959">929‑290‑6959</a> |
+  ✉️ Email: <a style="color:#000000" href="mailto:rajiv.rampersaud11@gmail.com">rajiv.rampersaud11@gmail.com</a> |
+  <div style="margin-top: 10px; font-weight: bold;">Our dedicated team is here to support you 24/7, anytime, anywhere.</div>
+</div>
+
+
+
+
+
+
+  
 
 
 
@@ -392,16 +410,16 @@
 
 
 <div class="section" id="form-validation">
-  <h2>📄 W-8/W-9 & 1042-S/1099 Filing & Validation Support</h2>
+  <h2>📄 W-8/W-9 &amp; 1042-S/1099 Filing &amp; Validation Support</h2>
   <p>We help lean teams, freelancers, and global payers stay compliant with IRS and FATCA/CRS requirements — without hiring a full in-house tax team. From form validation to full filing, we’ve got you covered.</p>
 
   <ul>
-    <li>✔️ W‑8BEN / W‑8BEN‑E treaty benefit checks & TIN exemption review</li>
-    <li>✔️ W‑9 validation & IRS name/TIN match support</li>
+    <li>✔️ W‑8BEN / W‑8BEN‑E treaty benefit checks &amp; TIN exemption review</li>
+    <li>✔️ W‑9 validation &amp; IRS name/TIN match support</li>
     <li>✔️ FATCA classification logic (Active/Passive NFFE, FFI, etc.)</li>
     <li>✔️ CRS self-certification review for non-US entities</li>
     <li>✔️ Withholding statement prep for W‑8IMY (flow-through/QI)</li>
-    <li>✔️ 1042‑S & 1099 filing via IRS e-file provider credentials</li>
+    <li>✔️ 1042‑S &amp; 1099 filing via IRS e-file provider credentials</li>
     <li>✔️ GIIN validation, entity type checks, income code mapping</li>
   </ul>
 
@@ -565,6 +583,79 @@
   </div>
 
 
+<div class="section" id="endorsements">
+  <h2>💼 Professional Endorsements</h2>
+  <p style="margin-bottom: 20px; font-size: 16px; color: #ccc;">
+    Direct feedback from professionals who’ve worked with me at the highest level.
+  </p>
+
+  <div id="endorsementSlider" style="position: relative; height: 300px; max-width: 500px; margin: auto;">
+    <div class="endorsement-slide" style="position: absolute; top: 0; left: 0; right: 0; opacity: 1; transition: opacity 1s;">
+      <div style="background-color: rgba(255,255,255,0.08); padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-align: center;">
+        <img src="Connor Hodgson.jpg" alt="Connor H." style="border-radius: 50%; width: 70px; height: 70px; margin-bottom: 10px; border: 2px solid #4CAF50;">
+        <p style="font-style: italic;">“Rajiv has always shown strong initiative and passion for what he does. His drive and focus set him apart.”</p>
+<p style="color: gold; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">★★★★★</p>
+        <p style="font-weight: bold;">— Connor H.<br><span style="font-size: 0.9em; color: #ccc;">Senior Tax Consultant, Deloitte</span></p>
+      </div>
+    </div>
+
+    <div class="endorsement-slide" style="position: absolute; top: 0; left: 0; right: 0; opacity: 0; transition: opacity 1s;">
+      <div style="background-color: rgba(255,255,255,0.08); padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-align: center;">
+        <img src="Timu.jpg" alt="Timi T." style="border-radius: 50%; width: 70px; height: 70px; margin-bottom: 10px; border: 2px solid #4CAF50;">
+        <p style="font-style: italic;">“Rajiv has a strong command of automation tools and is always looking for smarter, more efficient ways to streamline workflows.”</p>
+<p style="color: gold; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">★★★★★</p>
+        <p style="font-weight: bold;">— Olufolarotimi T.<br><span style="font-size: 0.9em; color: #ccc;">Senior Tax Consultant, Deloitte</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="section" id="free-tools" style="background-color: rgba(0,0,0,0.7); padding: 20px; border-radius: 12px; max-width: 450px;">
+  <h2>🎁 Free Tools &amp; Resources</h2>
+  <p>Drop your email and you will unlock free resources right to you:
+    <br>✔️ W8/W9 Prep Quick Guide 
+    <br>✔️ Excel Formula: Reconcile Entity Names Across Companies 
+    <br>✔️ Freelancer/Side Hustler Tax Checklist <br> 
+  </p>
+
+  <form id="freeToolsForm" onsubmit="handleFreeToolsForm(event)">
+    <input type="email" id="userEmail" placeholder="Enter your email" required="" style="padding:10px; width:100%; border-radius:6px; border:none; margin-bottom:10px;">
+    <button type="submit" style="background:#4CAF50; color:white; padding:10px 15px; border:none; border-radius:6px; cursor:pointer;">
+      🔓 Unlock Free Downloads
+    </button>
+  </form>
+
+  <div id="toolsLinks" style="display:none; margin-top:15px;">
+    <ul>
+      <li>📥 <a href="yourfile.pdf" style="color: #90ee90;">Tax Checklist for Freelancers (PDF)</a></li>
+      <li>📊 <a href="yourfile.xlsx" style="color: #90ee90;">Excel Formula: Reconcile Entity Names Across Companies (XLSX)</a></li>
+      <li>🧮 <a href="yourfile.docx" style="color: #90ee90;">W‑8/W‑9 Prep Quick Guide (DOCX)</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function handleFreeToolsForm(e) {
+    e.preventDefault();
+    const email = document.getElementById("userEmail").value;
+    if (!email) return;
+
+    // Optional: send email to your database (e.g. Google Apps Script, Formspree, Zapier, etc.)
+
+    localStorage.setItem("freeToolsEmail", email); // Save locally
+    document.getElementById("freeToolsForm").style.display = "none";
+    document.getElementById("toolsLinks").style.display = "block";
+  }
+</script>
+<!-- This is a copy and paste code it it needs to link back to websites -->
+
+
+
+
+
  <div class="section" id="credentials">
  <section style="background-color: rgba(255, 255, 255, 0.05); padding: 25px; color: white;">
   <h2 style="text-align: center; font-size: 28px;">Why Trust Us</h2>
@@ -590,6 +681,9 @@
 #avoDance { width: 100px; margin: 0 auto 10px; display: none; }
 
 </style>
+
+
+
 
 <div id="avoWrap">
   <button id="avoBtn">🥑</button>
@@ -687,5 +781,5 @@
   </nav>
   <p style="margin-top: 12px;">© 2025 Avocado Automate. All rights reserved.</p>
 </footer>
-</body>
-</html>
+
+</body></html>
