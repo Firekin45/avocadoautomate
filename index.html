@@ -565,51 +565,6 @@
 </div>
 
 
-
-
-<div class="section" id="free-tools" style="background-color: rgba(0,0,0,0.7); padding: 20px; border-radius: 12px; max-width: 450px;">
-  <h2>🎁 Free Tools &amp; Resources</h2>
-  <p>Drop your email and you will unlock free resources right to you:
-    <br>✔️ W8/W9 Prep Quick Guide 
-    <br>✔️ Excel Formula: Reconcile Entity Names Across Companies 
-    <br>✔️ Freelancer/Side Hustler Tax Checklist <br> 
-  </p>
-
-  <form id="freeToolsForm" onsubmit="handleFreeToolsForm(event)">
-    <input type="email" id="userEmail" placeholder="Enter your email" required="" style="padding:10px; width:100%; border-radius:6px; border:none; margin-bottom:10px;">
-    <button type="submit" style="background:#4CAF50; color:white; padding:10px 15px; border:none; border-radius:6px; cursor:pointer;">
-      🔓 Unlock Free Downloads
-    </button>
-  </form>
-
-  <div id="toolsLinks" style="display:none; margin-top:15px;">
-    <ul>
-      <li>📥 <a href="yourfile.pdf" style="color: #90ee90;">Tax Checklist for Freelancers (PDF)</a></li>
-      <li>📊 <a href="yourfile.xlsx" style="color: #90ee90;">Excel Formula: Reconcile Entity Names Across Companies (XLSX)</a></li>
-      <li>🧮 <a href="yourfile.docx" style="color: #90ee90;">W‑8/W‑9 Prep Quick Guide (DOCX)</a></li>
-    </ul>
-  </div>
-</div>
-
-<script>
-  function handleFreeToolsForm(e) {
-    e.preventDefault();
-    const email = document.getElementById("userEmail").value;
-    if (!email) return;
-
-    // Optional: send email to your database (e.g. Google Apps Script, Formspree, Zapier, etc.)
-
-    localStorage.setItem("freeToolsEmail", email); // Save locally
-    document.getElementById("freeToolsForm").style.display = "none";
-    document.getElementById("toolsLinks").style.display = "block";
-  }
-</script>
-<!-- This is a copy and paste code it it needs to link back to websites -->
-
-
-
-
-
  <div class="section" id="credentials">
  <section style="background-color: rgba(255, 255, 255, 0.05); padding: 25px; color: white;">
   <h2 style="text-align: center; font-size: 28px;">Why Trust Us</h2>
