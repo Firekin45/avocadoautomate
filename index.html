@@ -179,15 +179,13 @@
   <p style="font-size: 18px; line-height: 1.6;">
     <strong>Complex problems deserve simple, powerful solutions.</strong>
     <br><br>
-    Avocado Automate was founded with one goal: to simplify tax, automation, and data reporting using smart technology and relentless innovation. We believe you shouldn’t need a 10-person team or a $100K system to stay compliant or get answers fast.
-    <br><br>
-    Whether it's building an automated workflow, reviewing cross-border tax forms, or extracting insights from messy PDFs, we bring precision, speed, and creativity to every client interaction — without Big 4 price tags.
+  🚀 Smarter Tax & Automation — Without the Overhead
+Avocado Automate helps individuals and lean teams file taxes, clean messy spreadsheets, and automate repetitive work — fast, accurate, and without Big 4 price tags.
+Whether you're a solo founder, freelancer, or small firm, we simplify the complex using tools you already know: Excel, SQL, Python, and more.
+  
   </p>
 
-  <p style="font-size: 18px; line-height: 1.6;">
-    Recognized for <strong>resilience, innovation, and collaborative execution</strong>, Avocado Automate combines deep industry knowledge with modern tools — so you can move faster, stay compliant, and focus on what matters most.
-  </p>
-</div>
+  </div>
 
 
 
@@ -1121,47 +1119,43 @@ button:hover {
 
 
 
-
 <div class="section" id="contact">
   <h2 style="text-align: center; font-size: 28px;">📬 Contact Us</h2>
   <p style="text-align:center; max-width: 700px; margin: 0 auto 25px; font-size: 17px; color: #ccc;">
     Got a question about taxes, automation, or compliance? Send us a quick message — we’ll reply within 24 hours.
   </p>
 
-  <form action="https://script.google.com/macros/s/AKfycbzwxWMK_jI0LPe6IpfkK2UFsh608RZjkV8V5RkMuJZYEepcam8aOUla4St5UIMo7ulL/exec" method="POST" target="hiddenFrame" class="upload-form">
+  <form id="contactForm" action="https://script.google.com/macros/s/AKfycbzwxWMK_jI0LPe6IpfkK2UFsh608RZjkV8V5RkMuJZYEepcam8aOUla4St5UIMo7ulL/exec" method="POST" target="hiddenFrame" class="upload-form" onsubmit="return handleFormSubmit()">
     <div class="form-row">
-      <input type="text" name="name" placeholder="Full Name" required="">
-      <input type="email" name="email" placeholder="Email Address" required="">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
     </div>
 
-    <textarea name="message" rows="4" placeholder="Your Message..." required=""></textarea>
+    <textarea name="message" rows="4" placeholder="Your Message..." required></textarea>
 
     <button type="submit">📨 Send Message</button>
-<p id="formStatus" style="text-align:center; font-style: italic; color: #90ee90; display: none;">
-  ✅ Your message was sent — we’ll reply within 24 hours!
-</p>
 
-
-
-
-
+    <p id="formStatus" style="text-align:center; font-style: italic; color: #90ee90; display: none;">
+      ✅ Your message was sent — we’ll reply within 24 hours!
+    </p>
   </form>
-
-<script>
-  const form = document.querySelector('#contact form');
-  const statusMsg = document.getElementById('formStatus');
-
-  form.addEventListener('submit', function () {
-    setTimeout(() => {
-      statusMsg.style.display = 'block';
-      form.reset();
-    }, 800); // delay to wait for Google Script response
-  });
-</script>
-
 
   <iframe name="hiddenFrame" style="display:none;"></iframe>
 </div>
+
+<script>
+  function handleFormSubmit() {
+    const form = document.getElementById('contactForm');
+    const statusMsg = document.getElementById('formStatus');
+
+    setTimeout(() => {
+      statusMsg.style.display = 'block';
+      form.reset();
+    }, 1000); // Delay allows form to submit before reset
+
+    return true; // Allow submission
+  }
+</script>
 
 <style>
 #contact .upload-form {
@@ -1212,11 +1206,6 @@ button:hover {
   background: #2e7d32;
 }
 </style>
-
-
-
-
-
 
 
 
