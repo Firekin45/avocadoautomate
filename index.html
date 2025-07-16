@@ -8,7 +8,7 @@
 
 
    body {
-  background: url('ai-bg.png') no-repeat center center fixed;
+  background: url('images/ai-bg.png') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
@@ -69,7 +69,9 @@
       display: inline-block;
     }
     nav a:hover { background-color: #444; }
-
+nav {
+  background-color: rgba(0, 0, 0, 0.9);
+}
 
 h1 { font-size: 40px; }
 h2 { font-size: 30px; }
@@ -145,6 +147,9 @@ p, li { font-size: 16px; line-height: 1.6; }
     <h1 style="margin: 0; font-size: 36px; color: white; text-align: center;">Avocado Automate</h1>
     <h3 style="margin-top: 8px; font-weight: normal; color: white; text-align: center;">Smarter Data. Faster Decisions.</h3>
   </div>
+
+
+
    
 <div class="client-signin" style="position: absolute; top: 20px; right: 20px;">
   <a href="dashboard.html" 
@@ -221,8 +226,9 @@ p, li { font-size: 16px; line-height: 1.6; }
     <strong>Complex problems deserve simple, powerful solutions.</strong>
     <br><br>
   🚀 Smarter Tax & Automation — Without the Overhead
-Avocado Automate helps individuals and teams file taxes, clean messy spreadsheets, and automate repetitive work — fast, accurate, and without a big price tags.
+Avocado Automate helps individuals and lean teams file taxes, clean messy spreadsheets, and automate repetitive work — fast, accurate, and without Big 4 price tags.
 Whether you're a solo founder, freelancer, or small firm, we simplify the complex using tools you already know: Excel, SQL, Python, and more.
+  
   </p>
 
   </div>
@@ -312,6 +318,7 @@ Whether you're a solo founder, freelancer, or small firm, we simplify the comple
   const quotes = [
     "Need help with a 1042-S? I got you.",
     "Automation makes me spin.",
+    "No one likes messy spreadsheets — I smash them.",
     "Smarter data, faster filings, fewer headaches."
   ];
 
@@ -342,6 +349,16 @@ Whether you're a solo founder, freelancer, or small firm, we simplify the comple
 
   observer.observe(mascotBox);
 
+  // Chatbot open function — replace with your logic
+  function openChatbot() {
+    // Example: scroll to chatbot section
+    const chatbot = document.getElementById("chatbot");
+    if (chatbot) {
+      chatbot.scrollIntoView({ behavior: "smooth" });
+    } else {
+      alert("Chatbot coming soon!");
+    }
+  }
 </script>
   
 
@@ -683,7 +700,7 @@ button:hover {
 
   </div>
 </div>
-
+      </div>
 
     
   
@@ -768,6 +785,43 @@ button {
 
 button:hover {
   background: #2e7d32;
+}
+
+.upload-form {
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: rgba(255,255,255,0.04);
+  border: 1px solid #3e3e3e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.upload-form input[type="text"],
+.upload-form input[type="email"],
+.upload-form textarea,
+.upload-form input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #1c1c1c;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.file-label {
+  font-size: 14px;
+  color: #ccc;
 }
 
 .target-grid {
@@ -897,6 +951,8 @@ button:hover {
 </div>
   </div>
 
+</div>
+
 <div class="section" id="finance">
   <h2 style="font-size: 28px; color: white;">💼 Automated Bookkeeping & IRS Compliance Tools</h2>
   <p style="color: #ccc; font-size: 16px; line-height: 1.6;">
@@ -982,9 +1038,14 @@ button:hover {
 </div>
 
   </div>
+</div>
 
 
 
+
+
+
+<!-- Optional Style (if not already in your CSS) -->
 
 
 
@@ -1045,7 +1106,22 @@ button:hover {
 }
 </style>
 
+ 
 
+  
+
+
+
+
+<script>
+  function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ name, price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${name} added to cart — $${price.toFixed(2)}.\nRedirecting to checkout...`);
+    window.location.href = "shopping_cart2.html";
+  }
+</script>
 
 <script>
   window.addEventListener("DOMContentLoaded", () => {
@@ -1220,5 +1296,4 @@ class="action-button"
   <p style="margin-top: 12px;">© 2025 Avocado Automate. All rights reserved.</p>
 </footer>
 
-</body>
-</html>
+</body></html>
