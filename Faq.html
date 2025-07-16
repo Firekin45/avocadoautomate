@@ -32,7 +32,7 @@
     }
     h2 {
       text-align: center;
-      color: #4CAF50;
+      color: #bbb;
       font-size: 2.2em;
       margin-bottom: 30px;
     }
@@ -43,7 +43,7 @@
     .faq-question {
       cursor: pointer;
       font-weight: bold;
-      color: #90ee90;
+       color: #bbb;
       font-size: 1.2em;
       position: relative;
       padding-right: 30px;
@@ -51,7 +51,7 @@
     .faq-answer {
       display: none;
       padding-top: 10px;
-      color: #eee;
+       color: #bbb;
       font-size: 1em;
     }
     .faq-question:after {
@@ -59,33 +59,42 @@
       position: absolute;
       right: 0;
       font-size: 24px;
-      color: #4CAF50;
+      color: #bbb;
     }
     .faq-question.active:after {
       content: '-';
     }
-    .back-home {
-      display: block;
-      width: fit-content;
-      margin: 30px auto 0;
-      padding: 10px 20px;
-      background: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      text-align: center;
-    }
+    .action-button {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #bbb;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #444;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transform: scale(1.03);
+}
+
   </style>
 </head>
 <body>
   <header>
-    <h1>Avocado Automate 🥑</h1>
+    <h1>Avocado Automate </h1>
   </header>
   <div class="faq-section">
     <h2>Frequently Asked Questions</h2>
     <!-- INSERTED FULL FAQ LIST -->
-    <div class="faq-item"><div class="faq-question">📍 How do we connect?</div><div class="faq-answer">Please call, text, email or fill out a contact us form listed on our website. .</div></div>
+    <div class="faq-item"><div class="faq-question">📍 How do we connect?</div><div class="faq-answer">Please call, text, email or fill out a contact us form listed on our website.</div></div>
     <div class="faq-item"><div class="faq-question">🤖 What kind of automation services do you offer?</div><div class="faq-answer">We build as many automations and a variety tailored to your workflow.</div></div>
     <div class="faq-item"><div class="faq-question">💸 How much do your services cost?</div><div class="faq-answer">It depends on the service—please see our main website for details.</div></div>
     <div class="faq-item"><div class="faq-question">🕒 What time are you available?</div><div class="faq-answer">We’re available 7 days a week and will respond within 24 hours.</div></div>
@@ -103,7 +112,7 @@
     <div class="faq-item"><div class="faq-question">🚓 Can you go to jail for back taxes?</div><div class="faq-answer">Not for owing taxes. But fraudulent activity or willful evasion could result in penalties or legal issues.</div></div>
     <div class="faq-item"><div class="faq-question">📚 How many years can I file back taxes?</div><div class="faq-answer">Up to six years from the end of the relevant assessment year.</div></div>
     <div class="faq-item"><div class="faq-question">💰 Will I get a stimulus check if I haven’t filed in 5 years?</div><div class="faq-answer">No. You must have filed or used the IRS Non-Filer tool to qualify.</div></div>
-    <a href="index.html" class="back-home">⬅️ Back to Homepage</a>
+    <a href="index.html" class="action-button">⬅️ Back to Homepage</a>
   </div>
   <script>
     const questions = document.querySelectorAll(".faq-question");
