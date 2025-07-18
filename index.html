@@ -1139,6 +1139,27 @@ button:hover {
   }
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+        } else {
+          entry.target.classList.remove('reveal');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>
 
 
 <script>
@@ -1159,25 +1180,6 @@ button:hover {
 
 
 
-
-
-
-
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll(".endorsement-slide");
-    if (slides.length === 0) return;
-
-    let current = 0;
-    slides[current].style.opacity = 1;
-
-    setInterval(() => {
-      slides[current].style.opacity = 0;
-      current = (current + 1) % slides.length;
-      slides[current].style.opacity = 1;
-    }, 6000);
-  });
-</script>
 
 
 
@@ -1261,6 +1263,17 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.reveal {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #contact .form-row {
