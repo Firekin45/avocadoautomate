@@ -1,58 +1,148 @@
-
 <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: white;
+    }
+
+    .section {
+      padding: 60px 20px;
+      background-color: rgba(0, 0, 0, 0.85);
+      border-radius: 12px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #ccc;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    .box h3 {
+      color: #fff;
+    }
+
+    .box p {
+      color: #ccc;
+    }
+
+    .action-button {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.08);
+      color: #bbb;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 1px solid #444;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+      margin-top: 30px;
+    }
+
+    .action-button:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: white;
+      font-size: 14px;
+    }
+
+    /* Ensure good readability on small screens */
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 26px;
+      }
+
+      .section p {
+        font-size: 16px;
+        padding: 0 10px;
+      }
+
+      .action-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
 
 <body>
 
+  <div class="section" id="about-us">
+    <h2>🥑 About Avocado Automate</h2>
+    <p>
+      Avocado Automate was founded with one mission: 
+      <strong>to make smarter systems accessible to lean teams and everyday entrepreneurs</strong>.
+    </p>
 
+    <div class="grid">
+      <div class="box">
+        <h3>🧠 What We Do</h3>
+        <p>
+          We blend tax expertise, automation tools, and AI to help you save time, reduce errors, and work smarter. 
+          Whether you're reconciling tax forms or managing contractor payouts, we help you automate the pain points.
+        </p>
+      </div>
 
-<div class="section" id="about-us" style="padding: 60px 20px; background-color: rgba(0,0,0,0.85); border-radius: 12px;">
-  <h2 style="text-align:center; font-size: 32px; color: white;">🥑 About Avocado Automate</h2>
+      <div class="box">
+        <h3>📦 Who We Serve</h3>
+        <p>
+          We support founders, freelancers, small teams, and firms without the budget for Big 4 tools — but with the hustle to grow. 
+          If you're juggling compliance, spreadsheets, or financial chaos, we’re your unfair advantage.
+        </p>
+      </div>
 
-  <p style="max-width: 800px; margin: 20px auto; font-size: 17px; line-height: 1.7; color: #ccc; text-align: center;">
-    Avocado Automate was founded with one mission: 
-    <strong>to make smarter systems accessible to lean teams and everyday entrepreneurs</strong>.
-  </p>
-
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px;">
-    
-    <div style="background: rgba(255,255,255,0.06); padding: 25px; border-radius: 12px;">
-      <h3 style="color: #fff;">🧠 What We Do</h3>
-      <p style="color: #ccc;">
-        We blend tax expertise, automation tools, and AI to help you save time, reduce errors, and work smarter. 
-        Whether you're reconciling tax forms or managing contractor payouts, we help you automate the pain points.
-      </p>
+      <div class="box">
+        <h3>🚀 How We Work</h3>
+        <p>
+          We don't just sell templates or forms. We analyze your current process, identify what’s slowing you down, 
+          and build custom automations using Google tools, Python, R, Alteryx, and AI like Gemini or GPT.
+        </p>
+      </div>
     </div>
 
-    <div style="background: rgba(255,255,255,0.06); padding: 25px; border-radius: 12px;">
-      <h3 style="color: #fff;">📦 Who We Serve</h3>
-      <p style="color: #ccc;">
-        We support founders, freelancers, small teams, and firms without the budget for Big 4 tools — but with the hustle to grow. 
-        If you're juggling compliance, spreadsheets, or financial chaos, we’re your unfair advantage.
-      </p>
+    <div style="text-align: center;">
+      <a href="index.html" class="action-button">Back to Home</a>
     </div>
-
-    <div style="background: rgba(255,255,255,0.06); padding: 25px; border-radius: 12px;">
-      <h3 style="color: #fff;">🚀 How We Work</h3>
-      <p style="color: #ccc;">
-        We don't just sell templates or forms. We analyze your current process, identify what’s slowing you down, 
-        and build custom automations using Google tools, Python, R, Alteryx, and AI like Gemini or GPT.
-      </p>
-    </div>
-
   </div>
 
-<div style="text-align: center; margin-top: 30px;">
-  <a href="index.html" class="action-button" style="display: inline-block; background-color: rgba(255, 255, 255, 0.08); color: #bbb; padding: 10px 24px; border-radius: 8px; font-size: 15px; font-weight: bold; text-decoration: none; border: 1px solid #444; transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;">
-     Back to Home
-  </a>
-</div>
+  <footer>
+    <p>© 2025 Avocado Automate. All rights reserved.</p>
+  </footer>
 
-  
-  
-</div>
-<footer style="text-align:center; padding: 20px; background: #111; color: white;">
-
-  <p style="margin-top: 12px;">© 2025 Avocado Automate. All rights reserved.</p>
-</footer>
-
-</body></html>
+</body>
+</html>
