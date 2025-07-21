@@ -6,6 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
 
+/* Dark Themed Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.7); /* dark background */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(80, 80, 80, 0.8); /* dark gray thumb */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.9); /* lighter on hover */
+}
 
    body {
   background: url('ai-bg.png') no-repeat center center fixed;
