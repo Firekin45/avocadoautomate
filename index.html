@@ -163,7 +163,7 @@ p, li { font-size: 16px; line-height: 1.6; }
  <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: rgba(0, 0, 0, 0.9);">
   <div style="flex: 1;">
     <h1 style="margin: 0; font-size: 36px; color: white; text-align: center;">Avocado Automate</h1>
-    <h3 style="margin-top: 8px; font-weight: normal; color: white; text-align: center;">Smarter Data. Faster Decisions.</h3>
+   <div class="tagline">Smarter Data. Faster Decisions.</div>
   </div>
 
 
@@ -195,10 +195,9 @@ p, li { font-size: 16px; line-height: 1.6; }
 
   </header>
 <nav style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; text-align: center;">
-  <a href="#credentials">🌟 Why Choose Us</a>
-	 <a href="#about">👤 About</a>
- <a href="#automation-professionals"> No-Code Automation Consulting with Alteryx</a>
-  <a href="#tax">Tax Filing for (Individuals - Small Businesses)</a>
+  <a href="#credentials">🌟 Why Us</a>
+ <a href="#automation-professionals">⚙️Automations</a>
+  <a href="#tax">📄Tax Prep</a>
 
  
   <a href="#contact">📬 Contact</a>
@@ -210,10 +209,9 @@ p, li { font-size: 16px; line-height: 1.6; }
  
 
  <h2>Bridging the Gap Between Business &amp; Emerging Tech</h2>
-<p>I help small businesses and finance teams save time and simplify their work through easy-to-use automations — powered by Alteryx and smart no-code tools.
-</p>
+<p>Simplify taxes & tasks.</p>
 
-  <a href="#automation-professionals" class="action-button">💼 Explore Services</a>
+  <a href="#tax" class="action-button">💼 Explore Services</a>
 
 
 
@@ -350,209 +348,10 @@ p, li { font-size: 16px; line-height: 1.6; }
 
 
 
-<div class="section" id="contact">
-  <h2 style="text-align: center; font-size: 28px;"> 📬 Tell Us About a Process That’s Slowing You Down
-</h2>
-
-<p> <b>
-How It Works:<br>
-1️⃣ Describe your workflow or process that takes too much time. <br>
-2️⃣ We’ll review it within 24 hours and let you know if it can be automated. <br>
-3️⃣ If you’d like to move forward, you can purchase an automation plan. <br>
-4️⃣ We’ll build it and give you secure access, so you can run it on your side.  <br>
-
-</b></p>
-
-
-
-<p style="text-align:center; max-width: 700px; margin: 0 auto 25px; font-size: 17px; color: #ccc;"> Other ways to Contact Us:
-     <a href="tel:+18482291693" style="color: #90ee90; text-decoration: none;">1-(848)-(229)-(1693)</a> or
-     <a href="mailto:contact@avocadoautomate.com" style="color: #90ee90; text-decoration: none;">contact@avocadoautomate.com</a>
-  </p>
-
-
-
-	  
-  <p></p>
-
-  <form id="contactForm" action="https://script.google.com/macros/s/AKfycbzCbYyg8eyGSFZcfGSw1TwNAoPtkqBVyi0FVqtPigFpWDzWqyLUEYSRoBvSHL5w7pr1/exec" method="POST" target="hiddenFrame" class="upload-form" onsubmit="return handleFormSubmit()">
-    <div class="form-row">
-      <input type="text" name="name" placeholder="Full Name" required="">
-      <input type="email" name="email" placeholder="Email Address" required="">
-    </div>
-
-    <textarea name="message" rows="4" placeholder="Describe your issue, deadline, and your goal outcome..." required=""></textarea>
-
-    <button type="submit" class="action-button">📨 Send Message</button>
-
-    <p id="formStatus" style="text-align:center; font-style: italic; color: #90ee90; display: none;">
-      ✅ Your message was sent — we’ll reply within 24 hours!
-    </p>
-
-
-<p>
-
-
-
-
-
-   <button onclick="window.location.href='https://www.alteryx.com/'" class="action-button">Explore Alteryx - For turning raw data into actionable insights</button>
-
-
-
-
-
-
-</p>
-
-
-  </form>
-
-
-
-
-
-<div class="section" id="automation-professionals" style="padding: 50px 20px;">
-
-  <h2 style="text-align:center; font-size: 28px;">⚙️ Done-for-You Automation Setup</h2>
-
- 
-<div style="margin-top: 60px;">
-
-
-
-
-
-    <!-- Lite Tier -->
-    <div class="pricing-card gold">
-
-    <img src="https://acetaxservices.com/wp-content/uploads/2025/01/gold.jpg" alt="Gold Tier">
-    <h3>Gold Tier — Alteryx Automation Plan</h3>
-  <p style="font-size: 13px;"> <b>Who it's for:</b> Accounting firms, small businesses, and teams who want to simplify their data or reporting process</p>
-<div>
-      <ul>
-<li>Automate repetitive tasks and reconciliations (save 100+ hours a month)</li>
-<li>Clean and organize data for clear, reliable insights</li>
-<li>Set up repeatable Alteryx workflows tailored to your business</li>
-<li>Get easy, step-by-step instructions so your team can run everything smoothly</li>
-<li>Receive ongoing support and workflow updates</li>
-             </ul>
-<div class="price"> <span class="new-price">$99</span><span class="old-price">$299</span>
-</div>
-      <button onclick="window.location.href='https://pay.avocadoautomate.com/automation'" class="action-button">Add to Cart</button>
-
-    <p style="font-size: 12px; text-align: center; color: #999; margin-top: 20px;">
-  <i>*Automation services are for technical support and workflow optimization only. We do not provide legal or financial compliance. Clients are responsible for reviewing outputs and maintaining final oversight.</i>
-</p></div>
-  
-
-
-  </div>
-
-
-</div>
-  </div>
-
-
- 
-
-
-  <iframe name="hiddenFrame" style="display:none;"></iframe>
-</div>
-
-<script>
-  function handleFormSubmit() {
-    const form = document.getElementById('contactForm');
-    const statusMsg = document.getElementById('formStatus');
-
-    setTimeout(() => {
-      statusMsg.style.display = 'block';
-      form.reset();
-    }, 1000); // Delay allows form to submit before reset
-
-    return true; // Allow submission
-  }
-</script>
-
-<style>
-#contact .upload-form {
-  max-width: 600px;
-  margin: 30px auto;
-  background-color: rgba(255,255,255,0.04);
-  border: 1px solid #3e3e3e;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.section.reveal {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#contact .form-row {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-#contact input[type="text"],
-#contact input[type="email"],
-#contact textarea {
-  width: 100%;
-  padding: 12px;
-  background-color: #1c1c1c;
-  border: 1px solid #444;
-  color: #fff;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-#contact button {
- class="action-button"
-  background: #4CAF50;
-  color: white;
-  padding: 10px 25px;
-  border: none;
-  font-weight: bold;
-  font-size: 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background 0.3s ease;
-}
-
-#contact button:hover {
-class="action-button"
-  
-}
-</style>
 
   <div class="section" id="tax">
-    <h2>📄Smart Tax Prep for (Individuals - Small Businesses)</h2>
-<p><b>
-<p>
-🧾 How it works:<br>
-1️⃣ Choose your tax prep package. Contact us for support.<br>
-2️⃣ After checkout, we’ll email you a secure upload link.<br>
-3️⃣ Our team reviews uploads and prepares your return.<br>
-</p>
-</b>
-</p>
-<h3 style="text-align:center; font-size: 24px;"> Tax Preparation Filings</h3>
-    
-
-
-
+    <h2>📄Smart Tax Prep - Individuals & Small Businesses</h2>
+ <p style="margin-top:-4px;">Choose a package → Upload documents securely with link → We file your return.</p>
 
 
 
@@ -575,17 +374,7 @@ class="action-button"
 
 
 
-    <ul>
-      <li>Up to 4 W‑2s</li>
-      <li>1099 Retirement</li>
-      <li>Unemployment</li>
-      <li>Interest Income</li>
-      <li>Student Loan Interest</li>
-      <li>Earned Income Credit (EIC)</li>
-      <li>One State Return</li>
-      <li>Direct Deposit</li>
-    </ul>
-
+ 
 
 
   
@@ -599,7 +388,7 @@ class="action-button"
     <div class="price"> <span class="new-price">$49.99</span> <span class="old-price">$250</span> </div>
 
 
-    <button onclick="window.location.href='https://pay.avocadoautomate.com/3c3bbb6a-5651-43c4-8dff-79c'" class="action-button">Add to Cart</button>
+    <button onclick="window.location.href='https://pay.avocadoautomate.com/3c3bbb6a-5651-43c4-8dff-79c'" class="action-button">Learn More</button>
 
 
   </div>
@@ -609,16 +398,9 @@ class="action-button"
     <img src="https://acetaxservices.com/wp-content/uploads/2025/01/silver.jpg" alt="Silver Tier">
     <h3>🥈 Silver Package</h3>
 <p style="font-size: 13px;"> <b>Who it's for:</b> Ideal for families or individuals with dependents and education expenses.</p>
-    <ul>
-      <li>Dependents</li>
-      <li>Child Care Credit</li>
-      <li>Earned Income Credit (EIC)</li>
-      <li>Education Credit</li>
-      <li>Student Loan Interest</li>
-      <li>Gambling Winnings</li>
-    </ul>
+ 
     <div class="price"> <span class="new-price">$59.99</span> <span class="old-price">$300</span> </div>
-    <button onclick="window.location.href='https://pay.avocadoautomate.com/17023054-ad26-4c7e-beeb-6e4'" class="action-button">Add to Cart</button>
+    <button onclick="window.location.href='https://pay.avocadoautomate.com/17023054-ad26-4c7e-beeb-6e4'" class="action-button">Learn More</button>
 
 
   </div>
@@ -629,13 +411,9 @@ class="action-button"
     <h3>🥇 Gold Package</h3>
 
 <p style="font-size: 13px;"> <b>Who it's for:</b> Best for investors with capital gains, stock sales, or K‑1 income.</p>
-    <ul>
-      <li>Schedule D</li>
-      <li>Sale of Stocks</li>
-      <li>K‑1 Income</li>
-    </ul>
+
     <div class="price"> <span class="new-price">$89.99</span> <span class="old-price">$350</span></div>
-    <button onclick="window.location.href='https://pay.avocadoautomate.com/3ed50e50-d881-453a-9b1f-01c'" class="action-button">Add to Cart</button>
+    <button onclick="window.location.href='https://pay.avocadoautomate.com/3ed50e50-d881-453a-9b1f-01c'" class="action-button">Learn More</button>
   </div>
 
   <!-- Platinum -->
@@ -644,16 +422,9 @@ class="action-button"
     <h3>🏆 Platinum Package</h3>
 <p style="font-size: 13px;"> <b>Who it's for:</b> Tailored for freelancers, landlords, and sole proprietors with business or rental income.</p>
 
-    <ul>
-      <li>Schedule C / E</li>
-      <li>Small Business Income</li>
-      <li>Rental Property + Depreciation</li>
-      <li>1099‑MISC</li>
-      <li>K‑1 Income</li>
-      <li>Single‑Member LLC</li>
-    </ul>
+ 
     <div class="price"> <span class="new-price">$129.99</span> <span class="old-price">$500</span></div>
-    <button onclick="window.location.href='https://pay.avocadoautomate.com/bbd9b658-fd17-4ee8-bd1a-8dc'" class="action-button">Add to Cart</button>
+    <button onclick="window.location.href='https://pay.avocadoautomate.com/bbd9b658-fd17-4ee8-bd1a-8dc'" class="action-button">Learn More</button>
   </div>
 
   <!-- Diamond -->
@@ -665,15 +436,8 @@ class="action-button"
 
 <p style="font-size: 13px;"> <b>Who it's for:</b> Designed for small business owners with complex returns (Schedule C + E + depreciation).</p>
     <ul>
-      <li>Schedule C &amp; E</li>
-      <li>Small Biz + Rental Income</li>
-      <li>Depreciation &amp; Deductions</li>
-      <li>1099‑MISC</li>
-      <li>K‑1 Income</li>
-      <li>Single‑Member LLC</li>
-    </ul>
-    <div class="price"> <span class="new-price">$179.99</span> <span class="old-price">$650</span></div>
-    <button onclick="window.location.href='https://pay.avocadoautomate.com/d3eeaf4f-193c-42cd-805b-c13'" class="action-button">Add to Cart</button>
+     <div class="price"> <span class="new-price">$179.99</span> <span class="old-price">$650</span></div>
+    <button onclick="window.location.href='https://pay.avocadoautomate.com/d3eeaf4f-193c-42cd-805b-c13'" class="action-button">Learn More</button>
   </div>
 
 
@@ -779,6 +543,175 @@ button:hover {
 
   
 
+
+
+
+
+
+
+
+<div class="section" id="contact">
+  <h2 style="text-align: center; font-size: 28px;"> 📬 Tell Us About a Process That’s Slowing You Down
+</h2>
+<p><strong>How It Works</strong></p>
+    <ol style="margin-top:-6px; padding-left:20px;">
+      <li>Describe your workflow</li>
+      <li>Free review in 24 hours</li>
+      <li>Approve a plan → we build → you run it securely</li>
+    </ol>
+
+
+
+  <form id="contactForm" action="https://script.google.com/macros/s/AKfycbzCbYyg8eyGSFZcfGSw1TwNAoPtkqBVyi0FVqtPigFpWDzWqyLUEYSRoBvSHL5w7pr1/exec" method="POST" target="hiddenFrame" class="upload-form" onsubmit="return handleFormSubmit()">
+    <div class="form-row">
+      <input type="text" name="name" placeholder="Full Name" required="">
+      <input type="email" name="email" placeholder="Email Address" required="">
+    </div>
+
+    <textarea name="message" rows="4" placeholder="Describe the process, deadline, and goal..." required=""></textarea>
+
+    <button type="submit" class="action-button">📨 Send Message</button>
+
+    <p id="formStatus" style="text-align:center; font-style: italic; color: #90ee90; display: none;">
+      ✅ Your message was sent — we’ll reply within 24 hours!
+    </p>
+
+
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+
+  </form>
+
+
+
+
+
+<div class="section" id="automation-professionals" style="padding: 50px 20px;">
+
+
+
+
+
+    <!-- Lite Tier -->
+    <div class="pricing-card gold">
+
+    <img src="https://acetaxservices.com/wp-content/uploads/2025/01/gold.jpg" alt="Gold Tier">
+    <h3>Gold Tier — Alteryx Automation Plan</h3>
+  <p style="font-size: 13px;"> <b>Who it's for:</b> For teams that want cleaner, faster reporting, or automation</p>
+<div>
+   <div class="price"> <span class="new-price">$99</span><span class="old-price">$299</span>
+</div>
+      <button onclick="window.location.href='https://pay.avocadoautomate.com/automation'" class="action-button">Learn More</button>
+
+   <button onclick="window.location.href='https://www.alteryx.com/'" class="action-button">Explore Alteryx</button>
+    <p style="font-size: 12px; text-align: center; color: #999; margin-top: 20px;">
+  <i>*Automation services are for technical support and workflow optimization only. We do not provide legal or financial compliance. Clients are responsible for reviewing outputs and maintaining final oversight.</i>
+</p></div>
+  
+
+
+  </div>
+
+
+</div>
+  </div>
+
+
+ 
+
+
+  <iframe name="hiddenFrame" style="display:none;"></iframe>
+</div>
+
+<script>
+  function handleFormSubmit() {
+    const form = document.getElementById('contactForm');
+    const statusMsg = document.getElementById('formStatus');
+
+    setTimeout(() => {
+      statusMsg.style.display = 'block';
+      form.reset();
+    }, 1000); // Delay allows form to submit before reset
+
+    return true; // Allow submission
+  }
+</script>
+
+<style>
+#contact .upload-form {
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: rgba(255,255,255,0.04);
+  border: 1px solid #3e3e3e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#contact .form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #1c1c1c;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#contact button {
+ class="action-button"
+  background: #4CAF50;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+#contact button:hover {
+class="action-button"
+  
+}
+</style>
 
 <!-- STYLES -->
 <style>
@@ -1093,22 +1026,6 @@ button:hover {
 
 
 
- 
-<div class="section" id="about">
-  <h2 style="text-align: center; font-size: 32px; margin-bottom: 20px;">🚀 Our Mission</h2>
-  <p style="font-size: 18px; line-height: 1.6;">
-  <b>🚀Smarter Tax &amp; Automation — Without Big 4 Overhead.</b></p><p><i>
- Affordable solutions for founders, freelancers, and finance teams.
- </i> 
-<a href="Lower.html" style="color: #4CAF50; font-weight: bold; text-decoration: none;">Learn more about our mission →</a>
-</p>
-
-  </div>
-
-
-
-
-
 
 
 <div class="section" id="endorsements">
@@ -1202,8 +1119,9 @@ button:hover {
 
 
 
+
+
+
+
+
 </body></html>
-
-
-
-
