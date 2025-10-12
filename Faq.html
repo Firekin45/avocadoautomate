@@ -1,19 +1,285 @@
-<html>
-<!-- ===== Avocado Partners – FAQ ===== -->
-<section id="faq" style="max-width:900px;margin:60px auto;padding:0 20px;color:#fff;font-family:Segoe UI,Roboto,Arial,sans-serif;">
-  <h2 style="text-align:center;margin:0 0 24px;font-size:28px;letter-spacing:.3px;">Avocado Partners</h2>
-<body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>Avocado Partners — FAQ</title>
 
+  <style>
+    :root{
+      --bg:#020a07;
+      --text:#fff;
+      --muted:#bbb;
+      --brand:#4CAF50;
+      --border:#333;
+    }
+
+    /* Base */
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: Segoe UI, Roboto, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      min-height:100svh; /* safe viewport on mobile */
+    }
+
+    /* Canvas background host behind everything */
+    .content--canvas{ position:fixed; inset:0; z-index:-1; }
+
+    /* Page container */
+    .wrap{
+      max-width:900px;
+      margin:60px auto;
+      padding-inline:16px;   /* mobile padding */
+      padding-bottom:24px;
+    }
+
+    h2{
+      margin:0 0 24px;
+      text-align:center;
+      letter-spacing:.3px;
+      font-weight:700;
+      font-size:clamp(22px, 5vw, 28px);
+    }
+
+    /* FAQ */
+    .faq{ background: transparent; }
+    .faq .faq-item{ border-top:1px solid var(--border); }
+    .faq .faq-item:last-of-type{ border-bottom:1px solid var(--border); }
+
+    .faq-question{
+      width:100%;
+      text-align:left;
+      background:transparent;
+      color:var(--text);
+      border:0;
+      padding:16px 0;
+      font-size:clamp(16px, 3.8vw, 18px);
+      cursor:pointer;
+      display:flex; align-items:center; justify-content:space-between;
+      line-height:1.3;
+      touch-action:manipulation; /* better mobile tap */
+    }
+    .faq-question::after{
+      content:"▾";
+      font-size:0.9rem;
+      transform:rotate(0deg);
+      transition:transform .2s ease;
+    }
+    .faq-item.open .faq-question::after{ transform:rotate(180deg); }
+
+    .faq-answer{
+      overflow:hidden; transition:max-height .25s ease;
+      font-size:clamp(14px, 3.6vw, 16px);
+      color:var(--text);
+    }
+    .faq-answer[hidden]{ display:block; max-height:0; padding:0; }
+    .faq-item.open .faq-answer{ max-height:800px; padding:0 0 14px 0; }
+
+    .faq a{ color:var(--brand); text-decoration:underline; }
+
+    /* Back button */
+    .back-wrap{ text-align:center; margin-top:40px; }
+    .back{
+      display:inline-block;
+      padding:12px 20px;
+      background:#000;
+      color:#fff;
+      border:2px solid #fff;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:.3px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.4);
+      transition:transform .15s ease, box-shadow .15s ease;
+      font-size:clamp(14px,3.5vw,16px);
+    }
+    .back:active{ transform:translateY(1px); box-shadow:0 2px 8px rgba(0,0,0,0.35); }
+
+    /* Respect reduced motion users */
+    @media (prefers-reduced-motion: reduce){
+      .faq-answer{ transition:none; }
+    }
+  </style>
+</head>
+<body>
 
   <!-- Canvas background mount point -->
   <div class="content--canvas"></div>
 
- 
+  <main class="wrap" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Avocado Partners</h2>
 
+    <div class="faq">
+
+      <!-- FAQ ITEM -->
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What services do you offer?
+        </button>
+        <div class="faq-answer" hidden>
+          We offer <b>tax preparation</b> for individuals and small businesses, along with <b>automation services using Alteryx</b> to simplify and speed up your reporting, cleanup, and reconciliation tasks.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What if I miss the deadline?
+        </button>
+        <div class="faq-answer" hidden>
+          You can request an extension until <b>October 15</b> to file, but payment is still due by <b>April 15</b> to avoid penalties.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What is the greatest part of your job?
+        </button>
+        <div class="faq-answer" hidden>
+          The greatest part of our job is <b>helping people</b>.<br>
+          Our firm’s goal is to make a positive impact on as many individuals and businesses as possible — <b>whether they can afford it or not</b>.<br>
+          Prices can be negotiable because our <b>purpose is to help</b>.
+        </div>
+      </div> <!-- ✅ was missing in your code -->
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How do we connect?
+        </button>
+        <div class="faq-answer" hidden>
+          You can call, text, or email us at (848)-229-1693 or contact@avocadoautomate.com. We respond within 24 hours. For any direct contact needed with the managing partner contact (929)-290-6959.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What kind of automation services do you offer?
+        </button>
+        <div class="faq-answer" hidden>
+          We use <b>Alteryx</b> to automate repetitive tasks such as data cleanup, report preparation, and reconciliations, helping you save hours of manual work each week. We may use other tools also.<br><br>
+          You can also <b>submit automation ideas</b> through our contact form without purchasing a package. We’ll review your process and respond within 24 hours with recommendations.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How does the automation process work?
+        </button>
+        <div class="faq-answer" hidden>
+          You describe your current workflow or process. <br>
+          We review it within 24 hours and confirm if it can be automated in Alteryx, or with another tool. <br>
+          Once approved, we build your workflow. <br>
+          You can run it securely on your end without needing Alteryx or any other tools installed.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do I need any special software?
+        </button>
+        <div class="faq-answer" hidden>
+          No, you don’t need an Alteryx license to benefit. We design automations primarily in <b>Alteryx</b> and can deploy them so you can run results directly without having the program installed.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How much do your services cost?
+        </button>
+        <div class="faq-answer" hidden>
+          Prices vary by service. Please see our main website for details.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What happens after I pay for a package?
+        </button>
+        <div class="faq-answer" hidden>
+          After checkout, you’ll receive a <b>secure email</b> with instructions and an upload link. From there, you can submit your tax documents safely, and our team will begin preparing your return or automation setup.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Who do you work with?
+        </button>
+        <div class="faq-answer" hidden>
+          We work with <b>individuals, freelancers, and small businesses</b> that want reliable tax help or Alteryx automation for data and reporting processes.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Is my data secure?
+        </button>
+        <div class="faq-answer" hidden>
+          Yes. All client data is handled confidentially. Files are exchanged through secure encrypted upload links.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Where are you located?
+        </button>
+        <div class="faq-answer" hidden>
+          We’re based in <b>Queens, NY</b> and serve clients across the U.S. — both in-person and remotely.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What time are you available?
+        </button>
+        <div class="faq-answer" hidden>
+          We’re available <b>7 days a week</b> and typically respond within 24 hours.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What forms do I need to file my taxes?
+        </button>
+        <div class="faq-answer" hidden>
+          Any mail marked “IMPORTANT TAX INFORMATION ENCLOSED” — including W-2s, 1099s, and dependent details (names, SSNs, DOBs). Uploads are accepted online.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How long does it take to get my refund?
+        </button>
+        <div class="faq-answer" hidden>
+          Most refunds arrive within <b>21 days</b> if you e-file and choose direct deposit.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Should I file early?
+        </button>
+        <div class="faq-answer" hidden>
+          Yes! Filing early reduces stress and helps you get your refund faster. If you owe, it gives you more time to plan.
+        </div>
+      </div>
+
+    <div class="back-wrap">
+  <a class="back" href="index.html" style="color:#fff !important; text-decoration:none;">← Back to Home</a>
+</div>
+
+    </div>
+  </main>
+
+  <!-- ===== Background Canvas Script (unchanged logic, with a couple safety tweaks) ===== -->
   <script>
   'use strict';
 
-  /* ==== Added: math constants + helpers that the snippet expects ==== */
   const TO_RAD = Math.PI / 180;
   const HALF_PI = Math.PI / 2;
   const TAU = Math.PI * 2;
@@ -21,12 +287,8 @@
   const round = n => Math.round(n);
   const cos = Math.cos;
   const sin = Math.sin;
-  function fadeInOut(life, ttl) { // smooth in/out 0..1
-    const t = life / ttl;
-    return t < 0.5 ? (t / 0.5) : ((1 - t) / 0.5);
-  }
+  function fadeInOut(life, ttl){ const t = life/ttl; return t < .5 ? (t/.5) : ((1-t)/.5); }
 
-  /* ==== Original snippet (slightly wrapped) ==== */
   const pipeCount = 30;
   const pipePropCount = 8;
   const pipePropsLength = pipeCount * pipePropCount;
@@ -43,28 +305,19 @@
   const rangeHue = 60;
   const backgroundColor = 'hsla(150,80%,1%,1)';
 
-  let container;
-  let canvas;
-  let ctx;
-  let center;
-  let tick;
-  let pipeProps;
+  let container, canvas, ctx, center, tick, pipeProps, dpr;
 
-  function setup() {
+  function setup(){
     createCanvas();
     resize();
     initPipes();
     draw();
   }
-
-  function initPipes() {
+  function initPipes(){
     pipeProps = new Float32Array(pipePropsLength);
-    for (let i = 0; i < pipePropsLength; i += pipePropCount) {
-      initPipe(i);
-    }
+    for (let i=0;i<pipePropsLength;i+=pipePropCount) initPipe(i);
   }
-
-  function initPipe(i) {
+  function initPipe(i){
     let x = rand(canvas.a.width);
     let y = center[1];
     let direction = (round(rand(1)) ? HALF_PI : TAU - HALF_PI);
@@ -73,26 +326,18 @@
     let ttl = baseTTL + rand(rangeTTL);
     let width = baseWidth + rand(rangeWidth);
     let hue = baseHue + rand(rangeHue);
-    pipeProps.set([x, y, direction, speed, life, ttl, width, hue], i);
+    pipeProps.set([x,y,direction,speed,life,ttl,width,hue], i);
   }
-
-  function updatePipes() {
+  function updatePipes(){
     tick++;
-    for (let i = 0; i < pipePropsLength; i += pipePropCount) updatePipe(i);
+    for (let i=0;i<pipePropsLength;i+=pipePropCount) updatePipe(i);
   }
-
-  function updatePipe(i) {
+  function updatePipe(i){
     let i2=1+i, i3=2+i, i4=3+i, i5=4+i, i6=5+i, i7=6+i, i8=7+i;
-    let x = pipeProps[i];
-    let y = pipeProps[i2];
-    let direction = pipeProps[i3];
-    let speed = pipeProps[i4];
-    let life = pipeProps[i5];
-    let ttl = pipeProps[i6];
-    let width = pipeProps[i7];
-    let hue = pipeProps[i8];
+    let x=pipeProps[i], y=pipeProps[i2], direction=pipeProps[i3], speed=pipeProps[i4];
+    let life=pipeProps[i5], ttl=pipeProps[i6], width=pipeProps[i7], hue=pipeProps[i8];
 
-    drawPipe(x, y, life, ttl, width, hue);
+    drawPipe(x,y,life,ttl,width,hue);
 
     life++;
     x += cos(direction) * speed;
@@ -101,16 +346,16 @@
     const turnBias = round(rand(1)) ? -1 : 1;
     direction += turnChance ? turnAmount * turnBias : 0;
 
-    pipeProps[i] = x;
-    pipeProps[i2] = y;
-    pipeProps[i3] = direction;
-    pipeProps[i5] = life;
+    pipeProps[i]=x; pipeProps[i2]=y; pipeProps[i3]=direction; pipeProps[i5]=life;
 
-    checkBounds(x, y);
+    if (x > canvas.a.width) x = 0;
+    if (x < 0) x = canvas.a.width;
+    if (y > canvas.a.height) y = 0;
+    if (y < 0) y = canvas.a.height;
+
     if (life > ttl) initPipe(i);
   }
-
-  function drawPipe(x, y, life, ttl, width, hue) {
+  function drawPipe(x,y,life,ttl,width,hue){
     ctx.a.save();
     ctx.a.strokeStyle = `hsla(${hue},75%,50%,${fadeInOut(life, ttl) * 0.125})`;
     ctx.a.beginPath();
@@ -119,305 +364,54 @@
     ctx.a.closePath();
     ctx.a.restore();
   }
-
-  function checkBounds(x, y) {
-    if (x > canvas.a.width) x = 0;
-    if (x < 0) x = canvas.a.width;
-    if (y > canvas.a.height) y = 0;
-    if (y < 0) y = canvas.a.height;
-  }
-
-  function createCanvas() {
-    container = document.querySelector('.content--canvas');
-    if (!container) { // safety: create it if missing
-      container = document.createElement('div');
-      container.className = 'content--canvas';
-      document.body.appendChild(container);
-    }
-    canvas = {
-      a: document.createElement('canvas'),
-      b: document.createElement('canvas')
-    };
-    // b is the displayed canvas
-    canvas.b.style.cssText = `
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-    `;
+  function createCanvas(){
+    dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1)); // crisp on mobile
+    container = document.querySelector('.content--canvas') || document.body.appendChild(Object.assign(document.createElement('div'), {className:'content--canvas'}));
+    canvas = { a: document.createElement('canvas'), b: document.createElement('canvas') };
+    canvas.b.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;';
     container.appendChild(canvas.b);
-    ctx = {
-      a: canvas.a.getContext('2d'),
-      b: canvas.b.getContext('2d')
-    };
-    center = [];
-    tick = 0;
+    ctx = { a: canvas.a.getContext('2d'), b: canvas.b.getContext('2d') };
+    center = []; tick = 0;
   }
+  function resize(){
+    const w = Math.floor(window.innerWidth);
+    const h = Math.floor(window.innerHeight);
 
-  function resize() {
-    const { innerWidth, innerHeight } = window;
+    canvas.a.width  = w * dpr;  canvas.a.height = h * dpr;
+    canvas.b.width  = w * dpr;  canvas.b.height = h * dpr;
 
-    canvas.a.width  = innerWidth;
-    canvas.a.height = innerHeight;
-    ctx.a.drawImage(canvas.b, 0, 0);
+    canvas.a.style.width = canvas.b.style.width = '100%';
+    canvas.a.style.height = canvas.b.style.height = '100%';
 
-    canvas.b.width  = innerWidth;
-    canvas.b.height = innerHeight;
-    ctx.b.drawImage(canvas.a, 0, 0);
+    ctx.a.setTransform(dpr,0,0,dpr,0,0);
+    ctx.b.setTransform(dpr,0,0,dpr,0,0);
 
-    center[0] = 0.5 * canvas.a.width;
-    center[1] = 0.5 * canvas.a.height;
+    center[0] = 0.5 * canvas.a.width / dpr;
+    center[1] = 0.5 * canvas.a.height / dpr;
   }
-
-  function render() {
+  function render(){
     ctx.b.save();
     ctx.b.fillStyle = backgroundColor;
     ctx.b.fillRect(0,0,canvas.b.width,canvas.b.height);
     ctx.b.restore();
 
-    ctx.b.save();
-    ctx.b.filter = 'blur(12px)';
-    ctx.b.drawImage(canvas.a, 0, 0);
-    ctx.b.restore();
-
-    ctx.b.save();
-    ctx.b.drawImage(canvas.a, 0, 0);
-    ctx.b.restore();
+    ctx.b.save(); ctx.b.filter = 'blur(12px)'; ctx.b.drawImage(canvas.a,0,0); ctx.b.restore();
+    ctx.b.save(); ctx.b.drawImage(canvas.a,0,0); ctx.b.restore();
   }
+  function draw(){ updatePipes(); render(); requestAnimationFrame(draw); }
 
-  function draw() {
-    updatePipes();
-    render();
-    window.requestAnimationFrame(draw);
-  }
-
-  window.addEventListener('load', setup);
-  window.addEventListener('resize', resize);
+  window.addEventListener('load', setup, {passive:true});
+  window.addEventListener('resize', resize, {passive:true});
   </script>
 
-  <div class="faq">
-
-    <!-- FAQ ITEM -->
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        What services do you offer?
-      </button>
-      <div class="faq-answer" hidden>
-        We offer <b>tax preparation</b> for individuals and small businesses, along with <b>automation services using Alteryx</b> to simplify and speed up your reporting, cleanup, and reconciliation tasks.
-      </div>
-    </div>
-
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        What if I miss the deadline?
-      </button>
-      <div class="faq-answer" hidden>
-        You can request an extension until <b>October 15</b> to file, but payment is still due by <b>April 15</b> to avoid penalties.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        What is the greatest part of your job?
-      </button>
-      <div class="faq-answer" hidden>
-        The greatest part of our job is <b>helping people</b>.<br>
-        Our firm’s goal is to make a positive impact on as many individuals and businesses as possible — <b>whether they can afford it or not</b>.<br>
-        Prices can be negotiable because our <b>purpose is to help</b>.
-      </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        How do we connect?
-      </button>
-      <div class="faq-answer" hidden>
-        You can call, text, or email us at (848)-229-1693 or contact@avocadoautomate.com. We respond within 24 hours. For any direct contact needed with the managing partner contact (929)-290-6959.
-      </div>
-    </div>
-
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        What kind of automation services do you offer?
-      </button>
-      <div class="faq-answer" hidden>
-        We use <b>Alteryx</b> to automate repetitive tasks such as data cleanup, report preparation, and reconciliations, helping you save hours of manual work each week. We may use other tools also.<br><br>
-        You can also <b>submit automation ideas</b> through our contact form without purchasing a package. We’ll review your process and respond within 24 hours with recommendations.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        How does the automation process work?
-      </button>
-      <div class="faq-answer" hidden>
-         You describe your current workflow or process. <br>
-         We review it within 24 hours and confirm if it can be automated in Alteryx, or with another tool. <br>
-         Once approved, we build your workflow. <br>
-        You can run it securely on your end without needing Alteryx or any other tools installed.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        Do I need any special software?
-      </button>
-      <div class="faq-answer" hidden>
-        No, you don’t need an Alteryx license to benefit. We design automations primarily in <b>Alteryx</b> and can deploy them so you can run results directly without having the program installed.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        How much do your services cost?
-      </button>
-      <div class="faq-answer" hidden>
-        Prices vary by service. Please see our main website for details.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        What happens after I pay for a package?
-      </button>
-      <div class="faq-answer" hidden>
-        After checkout, you’ll receive a <b>secure email</b> with instructions and an upload link. From there, you can submit your tax documents safely, and our team will begin preparing your return or automation setup.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        Who do you work with?
-      </button>
-      <div class="faq-answer" hidden>
-        We work with <b>individuals, freelancers, and small businesses</b> that want reliable tax help or Alteryx automation for data and reporting processes.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        Is my data secure?
-      </button>
-      <div class="faq-answer" hidden>
-        Yes. All client data is handled confidentially. Files are exchanged through secure encrypted upload links.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        Where are you located?
-      </button>
-      <div class="faq-answer" hidden>
-        We’re based in <b>Queens, NY</b> and serve clients across the U.S. — both in-person and remotely.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        What time are you available?
-      </button>
-      <div class="faq-answer" hidden>
-        We’re available <b>7 days a week</b> and typically respond within 24 hours.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        What forms do I need to file my taxes?
-      </button>
-      <div class="faq-answer" hidden>
-        Any mail marked “IMPORTANT TAX INFORMATION ENCLOSED” — including W-2s, 1099s, and dependent details (names, SSNs, DOBs). Uploads are accepted online.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        How long does it take to get my refund?
-      </button>
-      <div class="faq-answer" hidden>
-        Most refunds arrive within <b>21 days</b> if you e-file and choose direct deposit.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        Should I file early?
-      </button>
-      <div class="faq-answer" hidden>
-        Yes! Filing early reduces stress and helps you get your refund faster. If you owe, it gives you more time to plan.
-      </div>
-    </div>
-
-
-   <div style="text-align:center; margin-top:40px;">
-  <a href="index.html" style="
-    display:inline-block;
-    padding:12px 28px;
-    background:#000;
-    color:#fff;
-    border:2px solid #FFFFFF;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:600;
-    font-family:Segoe UI,Roboto,Arial,sans-serif;
-    letter-spacing:0.3px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.4);
-    transition:all 0.2s ease;">
-    ← Back to Home
-  </a>
-</div>
-</section>
-
-<!-- ===== Minimal FAQ Styles (keeps your dark theme) ===== -->
-<style>
-
- html, body { height: 100%; margin: 0; }
-    body { background: #020a07; color: #fff; font-family: system-ui, Arial, sans-serif; }
-    /* This div is where the script will mount the canvases */
-    .content--canvas { position: fixed; inset: 0; z-index: -1; }
-    /* Optional foreground demo content so you can see it working */
-    .content {
-      position: relative; min-height: 100svh; display: grid; place-items: center;
-      text-align: center; padding: 4vmin;
-    }
-    .card {
-      background: rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.15);
-      border-radius: 16px; padding: clamp(16px,4vmin,40px); backdrop-filter: blur(6px);
-      max-width: 720px;
-    }
-
-  .faq .faq-item { border-top: 1px solid #333; }
-  .faq .faq-item:last-of-type { border-bottom: 1px solid #333; }
-  .faq-question{
-    width:100%; text-align:left; background:transparent; color:#fff;
-    border:0; padding:16px 0; font-size:1rem; cursor:pointer;
-    display:flex; align-items:center; justify-content:space-between;
-  }
-  .faq-question::after{
-    content:"▾"; font-size:0.9rem; transform:rotate(0deg); transition:transform .2s ease;
-  }
-  .faq-item.open .faq-question::after{ transform:rotate(180deg); }
-
-  /* Smooth slide */
-  .faq-answer{
-    overflow:hidden; transition:max-height .25s ease;
-  }
-  /* We use [hidden] to start collapsed and JS controls both attributes/classes */
-  .faq-answer[hidden]{ display:block; max-height:0; padding:0; }
-  .faq-item.open .faq-answer{ max-height:800px; padding:0 0 14px 0; }
-  .faq a{ color:#4CAF50; text-decoration:underline; }
-</style>
-
-<!-- ===== Accordion Logic (single-open) ===== -->
-<script>
+  <!-- ===== Accordion Logic (single-open) ===== -->
+  <script>
   (function(){
     const items = document.querySelectorAll('.faq .faq-item');
     items.forEach(item => {
       const btn = item.querySelector('.faq-question');
       const panel = item.querySelector('.faq-answer');
       btn.addEventListener('click', () => {
-        // close others
         items.forEach(i => {
           if(i !== item){
             i.classList.remove('open');
@@ -427,27 +421,14 @@
             q.setAttribute('aria-expanded','false');
           }
         });
-        // toggle this one
         const isOpen = item.classList.toggle('open');
-        if(isOpen){
-          panel.removeAttribute('hidden');
-        }else{
-          panel.setAttribute('hidden','');
-        }
+        if(isOpen){ panel.removeAttribute('hidden'); }
+        else { panel.setAttribute('hidden',''); }
         btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
+      }, {passive:true});
     });
-
-    // OPTIONAL: open first item by default
-    // if(items[0]) { items[0].classList.add('open'); items[0].querySelector('.faq-answer').removeAttribute('hidden'); items[0].querySelector('.faq-question').setAttribute('aria-expanded','true'); }
   })();
-</script>
-
-
-
-
-
+  </script>
 
 </body>
-
 </html>
