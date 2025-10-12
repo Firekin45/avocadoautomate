@@ -590,7 +590,7 @@ p, li { font-size: 16px; line-height: 1.6; }
     <div class="price"> <span class="new-price">$49.99</span> <span class="old-price">$250</span> </div>
 
 
-    <button onclick="window.location.href='https://pay.avocadoautomate.com/bronze'" class="action-button">Learn More</button>
+    <button onclick="window.location.href='https://pay.avocadoautomate.com/bronze'" class="action-button">Explore Package</button>
 
 
   </div>
@@ -602,7 +602,7 @@ p, li { font-size: 16px; line-height: 1.6; }
 <p style="font-size: 13px;"> <b>Who it's for:</b> Ideal for families or individuals with dependents and education expenses.</p>
  
     <div class="price"> <span class="new-price">$59.99</span> <span class="old-price">$300</span> </div>
-    <button onclick="window.location.href='https://pay.avocadoautomate.com/silver'" class="action-button">Learn More</button>
+    <button onclick="window.location.href='https://pay.avocadoautomate.com/silver'" class="action-button">Explore Package</button>
 
 
   </div>
@@ -614,7 +614,7 @@ p, li { font-size: 16px; line-height: 1.6; }
 <p style="font-size: 13px;"> <b>Who it's for:</b> Best for investors with capital gains, stock sales, or K‑1 income.</p>
 
     <div class="price"> <span class="new-price">$89.99</span> <span class="old-price">$350</span></div>
-    <button onclick="window.location.href='https://pay.avocadoautomate.com/gold'" class="action-button">Learn More</button>
+    <button onclick="window.location.href='https://pay.avocadoautomate.com/gold'" class="action-button">Explore Package</button>
   </div>
 
   <!-- Platinum -->
@@ -625,7 +625,7 @@ p, li { font-size: 16px; line-height: 1.6; }
 
  
     <div class="price"> <span class="new-price">$129.99</span> <span class="old-price">$500</span></div>
-    <button onclick="window.location.href='https://pay.avocadoautomate.com/platinum'" class="action-button">Learn More</button>
+    <button onclick="window.location.href='https://pay.avocadoautomate.com/platinum'" class="action-button">Explore Package</button>
   </div>
 
   <!-- Diamond -->
@@ -638,7 +638,7 @@ p, li { font-size: 16px; line-height: 1.6; }
 <p style="font-size: 13px;"> <b>Who it's for:</b> Designed for small business owners with complex returns (Schedule C + E + depreciation).</p>
     <ul>
      <div class="price"> <span class="new-price">$179.99</span> <span class="old-price">$650</span></div>
-    <button onclick="window.location.href='https://pay.avocadoautomate.com/Diamond'" class="action-button">Learn More</button>
+    <button onclick="window.location.href='https://pay.avocadoautomate.com/Diamond'" class="action-button">Explore Package</button>
   </div>
 
 
@@ -647,12 +647,20 @@ p, li { font-size: 16px; line-height: 1.6; }
 
 
 <style>
-.pricing-tier-grid {
+
+ .pricing-tier-grid {
   display: grid;
   gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(5, 1fr);   /* 👈 force 3 across */
   padding: 20px;
 }
+@media (max-width: 1024px){
+  .pricing-tier-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px){
+  .pricing-tier-grid { grid-template-columns: 1fr; }
+}
+
 
 .pricing-card {
   background: rgba(0, 0, 0, 0.7);
@@ -805,7 +813,7 @@ button:hover {
 
 <div>
 </div>
-      <button onclick="window.location.href='https://pay.avocadoautomate.com/businessautomation'" class="action-button">Learn More</button>
+      <button onclick="window.location.href='https://pay.avocadoautomate.com/automation'" class="action-button">Get Started for $99</button>
 
 <p style="font-size: 12px; text-align: center; color: #999; margin-top: 20px;">
   <i>*Automation services are for technical support and workflow optimization only. We do not provide legal or financial compliance. Clients are responsible for reviewing outputs and maintaining final oversight.</i>
@@ -998,9 +1006,12 @@ button:hover {
 }
 
 .form-row {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  display: grid; 
+  grid-template-columns: 1fr 1fr;  /* <-- two equal columns */
+  gap: 12px; 
+}
+@media (max-width: 700px){
+  .form-row { grid-template-columns: 1fr; }  /* <-- stacks on small screens */
 }
 
 .upload-form input[type="text"],
@@ -1331,7 +1342,6 @@ button:hover {
 
 
 </body></html>
-
 
 
 
